@@ -1,0 +1,350 @@
+.explore_section
+{
+	position:absolute;
+	top:80px;
+	left:20px;
+	right:20px;
+	padding:0px;
+	/*height:170px;*/
+	font-family: 'Caveat Brush', cursive;	
+	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
+	font-size:30px;
+	color:#ccc;
+	text-align:center;
+}
+
+.exploration_level
+{
+	font-size:24px;
+}
+
+.explore_button
+{
+	width:200px;
+	height:100px;
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	margin:0px;
+}
+
+.upgrade_passive_exploration_button
+{
+	position:absolute;
+	bottom:40px;
+	right:220px;
+	margin:0px;
+}
+
+.explore_bar
+{
+	width:100%;
+	position: relative;
+	border:2px solid rgba(0,0,0,0.6);
+	border-radius:5px;
+	height:20px;
+	box-shadow:inset 0px -33px 0px -10px rgba(255,255,255,0.2), inset 0px 10px 15px -10px rgba(0,0,0,0.8);
+	overflow:hidden;
+	margin-bottom:5px;
+}
+
+.explore_progress_bar
+{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	height:20px;
+	width:50%;
+	background-color:rgba(100,150,100,0.5);
+	box-shadow:inset 0px 15px 0px -5px rgba(255,255,255,0.2), inset -25px 0px 20px -20px rgba(255,255,255,0.5), inset 0px -10px 5px -10px rgba(0,0,0,0.8),10px 0px 10px 0px rgba(0,0,0,0.5);
+	/*border-right:2px solid rgba(0,0,0,0.5);*/
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.explore_progress_bar_end
+{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	height:20px;
+	width:20px;
+	box-shadow:10px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+.explore_progress_text
+{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	text-align: center;
+	font-family: 'Caveat Brush', cursive;	
+	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
+	font-size:14px;
+}
+
+.known_locations
+{
+	position:absolute;
+	top:130px;
+	left:20px;
+	right:20px;
+	bottom:120px;
+	padding-left:0px;
+	padding-top: 0px;
+	border-radius:5px;
+	font-family: 'Caveat Brush', cursive;
+	background-color:rgba(100,150,100,0);
+	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
+	font-size:45px;
+	color:#ccc;
+	overflow-x:hidden;
+	overflow-y:auto;
+	text-align:center;
+}
+
+.location_buttons
+{
+	position:absolute;
+	height:90px;
+	left:20px;
+	right:20px;
+	bottom:20px;
+	text-align:right;
+}
+
+.known_location
+{
+	font-size:30px;
+	border-radius:5px;
+	border:2px solid rgba(0,0,0,0.6);
+	box-shadow:inset 0px 33px 0px -10px rgba(255,255,255,0.2), inset 0px -10px 15px -10px rgba(0,0,0,0.5);
+	display:inline-block;
+	margin-right:10px;
+	margin-top:10px;
+	width:200px;
+	height:120px;
+	padding:20px;
+	background-size:cover;
+	background-position:center;
+	opacity:0.9;
+	color:#fff;
+	cursor: pointer;
+	text-align:center;
+	vertical-align: middle;
+	box-shadow:inset 0px 70px 0px -10px rgba(255,255,255,0.2), inset 0px -10px 15px -10px rgba(0,0,0,0.5), inset 0px 0px 1px 2px rgba(0,0,0,1), 0px 0px 2px 1px rgba(0,0,0,0.8);
+	line-height: 1;
+	background-color:rgba(0,0,0,0.5);
+	border:3px solid rgba(255,255,255,0.9);
+}
+
+.location_buttons .known_location
+{
+	background-color:rgba(0,0,0,0.5);
+	cursor: default;
+}
+
+.location_buttons .known_location,
+.known_location.menu_button
+{
+	height:90px;
+	margin-top:0px;
+	margin-right:0px;
+	margin-left:10px;
+	padding:10px;
+	width:180px;
+	box-shadow:inset 0px 55px 0px -10px rgba(255,255,255,0.4), inset 0px -10px 15px -10px rgba(0,0,0,0.5), inset 0px 0px 1px 2px rgba(0,0,0,1), 0px 0px 2px 1px rgba(0,0,0,0.8);
+	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
+	font-family: 'Caveat Brush', cursive;
+	width:250px;
+	font-size:30px;
+}
+
+.known_location.menu_button
+{
+	cursor: pointer;
+	background-color:rgba(0,100,0,0.5);
+}
+
+/*.known_location:hover
+{
+	opacity:1;
+	box-shadow:inset 5px 10px 10px rgba(0,0,0,0.2);
+}*/
+
+.shop_bg,
+.current_location_bg
+{
+	position: absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	background-size:cover;
+	background-position:center;
+	opacity:0.2;
+}
+
+.shop_bg
+{
+	background-image: url(../img/load-4461067_640.jpg);
+}
+
+.current_location_title
+{
+	font-family: 'Caveat Brush', cursive;
+	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
+	font-size:30px;
+	color:#fff;
+}
+
+.current_location_parsed_actions .action_bar
+{
+	text-align: left;
+}
+
+.unlockable_list
+{
+	position:absolute;
+	top:80px;
+	left:10px;
+	border-radius:5px;
+	/*border:2px solid rgba(0,0,0,0.6);*/
+	/*box-shadow:inset 0px 33px 0px -10px rgba(255,255,255,0.2), inset 0px -10px 15px -10px rgba(0,0,0,0.5);*/
+	bottom:20px;
+	right:10px;
+	overflow-x:visible;
+	overflow-y:auto;
+	font-family: 'Caveat Brush', cursive;
+	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
+	font-size:20px;
+	color:#ccc;
+	text-align:center;
+}
+
+.unlockable_list .single_location
+{
+	width:100%;
+	text-align:left;
+	margin-top:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+	border-top:1px solid #000;
+	position: relative;
+	color:#eee;
+}
+
+.unlockable_list .single_location button
+{
+	float: none;
+	display: inline-block;
+	position: absolute;
+	left:0px;
+	top:10px;
+	width:100px;
+}
+.unlockable_list .location_name
+{
+	font-size:30px;
+	padding-left:110px;
+}
+
+.unlockable_list .location_description
+{
+	padding-left:110px;
+	display: inline-block;
+}
+
+.location_required_good
+{
+	color:#8c8;
+}
+
+.location_required_bad
+{
+	color:#c88;
+}
+
+@media only screen and (max-width: 650px) {
+	.explore_section
+	{
+		height:270px;
+ 	}
+	.upgrade_passive_exploration_button
+	{
+		width:120px;
+		left:0px;
+	}
+	.known_locations
+	{
+		top:120px;
+	}
+
+	.unlockable_list .location_name
+	{
+		padding-left:3px;
+		margin-top:0px;
+		display: block;
+	}
+
+	.unlockable_list .location_description
+	{
+		padding-left:3px;
+	}
+
+	.unlockable_list .single_location button
+	{
+		position: absolute;
+		left:auto;
+		top:auto;
+		bottom:5px;
+		right:3px;
+		margin:0px;
+	}
+
+	.known_location
+	{
+		width:48%;
+		margin-left:1%;
+		margin-right:1%;
+	}
+}
+
+
+
+
+
+.list {
+    display:none; 
+    height:auto;
+    margin:0;
+    float: left;
+}
+.hide{
+    background-image: url(../img/burger-3442227_640.jpg);
+    font-size:20px;
+	
+}
+
+.hide2{
+    background-image: url(../img/burger-3442227_640.jpg);
+    font-size:20px;
+		width:300px;
+	
+}
+
+
+
+.hide:hover{
+    color: #eee;
+    text-shadow: 0 0 1px #666;
+    text-decoration: none;
+    box-shadow: 0 0 4px #222 inset;
+    opacity: 1;
+    margin-bottom: 25px;
+}
+
