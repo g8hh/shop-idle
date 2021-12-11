@@ -1,0 +1,82 @@
+@keyframes floating_text {
+    0%   {
+    	opacity:0;
+        transform:scale(1.5);
+    	margin-top: -25px;
+    }
+    20%   {
+    	opacity:0.8;
+    	margin-top: -25px;
+        transform:scale(1.5);
+    }
+    100%   {
+    	opacity:0;
+        transform:scale(0.1);
+    	margin-top: -75px;
+    }
+}
+
+@keyframes floating_text_down {
+    0%   {
+        opacity:0;
+        margin-top: -20px;
+        transform:scale(1.5);
+    }
+    20%   {
+        opacity:0.8;
+        margin-top: -20px;
+        transform:scale(1.5);
+    }
+    100%   {
+        opacity:0;
+        margin-top: 35px;
+        transform:scale(1);
+    }
+}
+
+.floating_text
+{
+    margin-left: -100px;
+    margin-top: -50px;
+    position: absolute;
+    left: 50%;
+    top: 75px;
+    z-index: -1;
+    font-size: 35px;
+    font-family: 'Caveat Brush', cursive;
+    text-shadow: 1px 1px 0px rgba(0,0,0,1), 1px -1px 0px rgba(0,0,0,1), -1px 1px 0px rgba(0,0,0,1), -1px -1px 0px rgba(0,0,0,1), 1px 1px 3px rgba(0,0,0,1);
+    width: 200px;
+    text-align: center;
+    height: 50px;
+    opacity:0;
+    animation-name: floating_text;
+    animation-duration: 3s;
+    -ms-transform-origin: center center; /* IE 9 */
+    -webkit-transform-origin: center center; /* Chrome, Safari, Opera */
+    transform-origin: center center;
+}
+
+.item_name .floating_text
+{
+    top:40px;
+}
+
+.unit_container .item_name .floating_text
+{
+    top:60px;
+}
+
+.floating_text.down
+{
+    z-index: -2;
+    animation-name: floating_text_down;
+    animation-duration: 1s;
+}
+
+.single_counter .floating_text
+{
+    margin-left:-50%;
+    width:100%;
+    overflow:visible;
+    left:50% !important;
+}

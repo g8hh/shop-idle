@@ -1,0 +1,843 @@
+<!doctype html>
+<!DOCTYPE html><html><head><meta charset="utf-8">
+	 
+	<meta name="viewport" content="width=device-width">
+	<title>商店放置</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/general.js"></script>
+	<script src="js/animations.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/available_locations.js"></script>
+	<script src="js/available_actions.js"></script>
+	<script src="js/available_items.js"></script>
+	<script src="js/available_units.js"></script>
+	<script src="js/available_monsters.js"></script>
+	<script src="js/available_achievements.js"></script>
+
+	<script src="js/localstorage.js"></script>
+	<script src="js/shop.js"></script>
+	<script src="js/skills.js"></script>
+	<script src="js/locations.js"></script>
+	<script src="js/actions.js"></script>
+	<script src="js/items.js"></script>
+	<script src="js/monsters.js"></script>
+	<script src="js/floating_text.js"></script>
+	<script src="js/achievements.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/shop.css">
+	<link rel="stylesheet" type="text/css" href="css/locations.css">
+	<link rel="stylesheet" type="text/css" href="css/actions.css">
+	<link rel="stylesheet" type="text/css" href="css/floating_text.css">
+	<link rel="stylesheet" type="text/css" href="css/achievements.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+	<link rel="stylesheet" href="css/all.css" crossorigin="anonymous">
+</head>
+<body>
+	<div class="main_window">
+		<div class="paper_bg"></div>
+		<div id="content_loading" class="page_container active">
+			
+			<div class="page_section">
+				加载中...					
+			</div>	
+			<button class="hide2" onclick="clearLocalStorage();location.reload();">清空数据！【记得备份】</button><br><br>
+			<div class="page_section">
+				<span class="processing_amount"></span>
+			</div>			
+		</div>
+		
+		
+		
+		
+		<div id="content_home2" class="page_container">
+			<div class="ok"></div>
+			<div class="page_section">
+				<button class="menu_button slim" data-target-content="locations">位置</button>
+				<button class="menu_button slim home_button" data-target-content="home">商店</button>	
+			
+			</div>
+				<div class="page_section">
+					当你获得一些特殊物品后就能解锁小功能【比如你屠龙后？】
+				</div>			
+		    <button id="adiv2" class="hide"  onclick="test(this)"> 经验兑换</button>  		
+		    <button id="adiv3" class="hide"  onclick="test3(this)">化身恶龙</button>	
+            <button id="adiv4" class="hide"  onclick="test4(this)">存档管理</button>
+       
+  
+
+          <div  id="div2" class="list">  
+		    <div class="home_devider">经验兑换-经验球数量： <span class="w1"></span><br></div>
+			<div class="page_section">基础升级经验改为1点每级翻1.1倍</div>
+			<div class="page_section">每个【经验球】可以兑换T1-10经验，T2-5经验，T3-2.5经验......</div>
+			<div class="page_section">要首先开技能兑换才有效果！不然材料丢失经验不加！</div>
+			<div class="page_section"><button1  onclick="兑换()" id="经验">T1世界经验</button1></div>
+			<div class="page_section"><button1  onclick="兑换_村庄()" id="村庄">T2村庄经验</button1></div>
+            <div class="page_section"><button1  onclick="兑换_矿洞()" id="矿洞">T2矿洞经验</button1></div>
+            <div class="page_section"><button1  onclick="兑换_海边()" id="海边">T2海边经验</button1></div>	
+			<div class="page_section"><button1  onclick="兑换_游牧()" id="游牧">T3游牧经验</button1></div>
+            <div class="page_section"><button1  onclick="兑换_农场()" id="农场">T3农场经验</button1></div>
+            <div class="page_section"><button1  onclick="兑换_航海()" id="航海">T3航海经验</button1></div>	
+			<div class="page_section"><button1  onclick="兑换_王国()" id="王国">T4王国经验</button1></div>
+            <div class="page_section"><button1  onclick="兑换_地狱()" id="地狱">T4地狱经验</button1></div>
+            <div class="page_section"><button1  onclick="兑换_战争()" id="战争">T4战争经验</button1></div>	
+			<div class="page_section"><button1  onclick="兑换_太空()" id="太空">T5太空经验</button1></div>
+            <div class="page_section"><button1  onclick="兑换_水星()" id="水星">T5水星经验</button1></div>
+            <div class="page_section"><button1  onclick="兑换_金星()" id="金星">T5金星经验</button1></div>	
+            <div class="page_section"><button1  onclick="兑换_火星()" id="火星">T5火星经验</button1></div>	
+          </div>
+
+          <div id="div3"class="list">
+		  <div class="home_devider">屠龙勇士终成恶龙-恶龙数量： <span class="w2"></span><br></div>
+			<div class="page_section">化身恶龙-恶龙之力： <span class="w3"></div>
+			<div class="page_section">化身恶龙-恶龙之魂： <span class="w4"></div>
+			<div class="page_section">龙の爪【加获取掠夺最高倍率】： <span class="w5"></div>
+			<div class="page_section">龙の鳞【加获取掠夺最低倍率】： <span class="w6"></div>	
+			<div class="page_section">龙の角【加获取恶龙之力倍率】： <span class="w7"></div>				
+			<div class="page_section">恶龙之魂效果只有百分之一但重置后依然保留！</div>		
+			<div class="page_section">屠龙100只后化身成恶龙上限1w，根据现有的恶龙数量增加恶龙之力。恶龙之力可掠夺硬币。</div>				
+            <button id="恶龙之力1" class="hide2"  onclick="恶龙之力_1()">掠夺财宝</button>	
+            <button id="恶龙之力2" class="hide2"  onclick="恶龙之力_2()">腐化【消耗全部恶龙换取龙魂】</button>	
+            <button id="恶龙之力3" class="hide2"  onclick="恶龙之力_3()">历练【提升恶龙能力】</button>	
+            <div class="home_devider"id="恶龙之力4">历练 </div>
+			
+
+          </div>
+		  
+          <div id="div4"class="list">
+		  <div class="home_devider">存档管理【手机更新可能会丢失数据，记得多多备份。存档不规范，两眼泪汪汪。】</div>
+
+            <button id="存档管理1" class="hide2"  onclick="存档管理()">导出【复制保存起来】</button>	
+            <button id="存档管理2" class="hide2"  onclick="读档管理()">导入【小心确定！】</button>	
+             <div class="home_devider"id="恶龙之力4">下方存档点【把存档粘贴进去在导入！！！】 </div>
+             <input type="text"id="存档管理3"  style="height:20px;width:500px;" value="" />
+
+          </div>
+
+
+
+		
+		</div>		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div id="content_home" class="page_container">
+			<div class="shop_bg"></div>
+			<div class="page_section">
+				<button class="menu_button slim" data-target-content="locations">位置</button>
+				<button class="menu_button slim" data-target-content="options">选项</button>			
+			</div>
+			
+			<div class="page_section counters_container">
+				<span class="counters_title">销售</span><br>
+				硬币：<span class="item_coins commas"></span><br>
+				店铺价值： <span class="coins_gained"></span>
+				<!-- Trade speed: <span class="trade_speed_level"></span><br/>
+				Upgrade cost: <span class="trade_speed_cost"></span><br/>
+				<button class="slim gold trade_speed_upgrade_button" onclick="upgrade_trade_speed()">Upgrade</button> -->
+			</div>	
+			<div class="all_counters">
+			</div>
+			<div class="new_counters">
+			</div>		
+			
+		</div>
+		<div id="content_set_counter" class="page_container">
+			<div class="shop_bg"></div>
+			<div class="page_section">
+			
+				<button class="menu_button slim home_button" data-target-content="home">商店</button>
+			</div>
+			<div class="item_list"></div>
+			<div class="achievement_page_container"><span class="page_back" onclick="adjust_inventory_page(-1)">&lt;</span> <span class="page_number"></span><span class="page_further" onclick="adjust_inventory_page(1)">&gt;</span></div>
+		</div>
+		<div id="content_assign_units" class="page_container">
+			<div class="page_section">
+				<button class="menu_button slim" data-target-content="current_action">返回</button>
+			</div>
+			<div class="item_list"></div>
+		</div>
+		
+		<div id="content_achievements" class="page_container">
+			<div class="page_section">
+				<button class="menu_button slim home_button" data-target-content="home">商店</button>
+				<button class="menu_button slim" data-target-content="spend_ap">花费 AP</button>
+							
+			</div>
+			<div class="ap_amount_container"></div>
+			<div class="achievement_list"></div>
+			<div class="achievement_page_container"><span class="page_back" onclick="adjust_achievement_page(-1)">&lt;</span> <span class="page_number"></span><span class="page_further" onclick="adjust_achievement_page(1)">&gt;</span></div>
+		</div>
+		<div id="content_single_achievement" class="page_container">
+			<div class="page_section">
+				<button class="menu_button slim" data-target-content="achievements">成就</button>
+			</div>
+			<div class="achievement_details"></div>
+		</div>
+		<div id="content_spend_ap" class="page_container">
+			<div class="page_section">
+				<button class="menu_button slim" data-target-content="achievements">成就</button>
+			</div>
+			<div class="ap_amount_container"></div>
+			<div class="spend_ap_list"></div>
+		</div>
+		
+	
+	
+		
+		
+		
+		<div id="content_single_ap_bonus" class="page_container">
+			<div class="page_section">
+				<button class="menu_button slim" data-target-content="spend_ap">返回</button>
+			</div>
+			<div class="ap_amount_container"></div>
+			<div class="single_ap_bonus_container"></div>
+		</div>
+		
+		<div id="content_set_counter_item" class="page_container">
+			<div class="shop_bg"></div>
+			<div class="page_section">
+				<!-- <button class="menu_button slim" data-target-content="home">Shop</button> -->
+				<button class="menu_button slim" data-target-content="set_counter">返回</button>
+			</div>
+			<div class="page_section">
+				<div class="selected_item"></div>
+				<div class="amount_select_section">
+					<div class="amount_select select_less" onclick="adjust_sell_amount(-1)">-</div>
+					<div class="amount_select select_more" onclick="adjust_sell_amount(1)">+</div>
+				</div>
+				
+			</div>
+			<div class="set_counter_summary">
+					<div class="summary_title">说明</div>
+					物品： <span class="item_sold"></span><br>
+					数量： <span class="amount_sold"></span><br>
+					时间： <span class="time_sold"></span><br>
+					硬币： <span class="coins_sold"></span><br>
+					<button class="start_selling_button disabled" onclick="start_selling()">开始销售</button>
+				</div>
+		</div>
+		<div id="content_item_details_page" class="page_container">
+			<div class="shop_bg"></div>
+			<div class="page_section">
+				<!-- <button class="menu_button slim" data-target-content="home">Shop</button> -->
+				<button class="menu_button slim" data-target-content="back">返回</button>
+			</div>
+			<div class="page_section">
+				<div class="selected_item"></div>
+			</div>
+			<div class="set_counter_summary">
+					<div class="summary_title">说明</div>
+					物品： <span class="item_sold"></span><br>
+					时间： <span class="time_sold"></span><br>
+					硬币： <span class="coins_sold"></span><br>
+				</div>
+		</div>
+		<div id="content_assign_single_unit" class="page_container">
+			<div class="page_section">
+				<!-- <button class="menu_button slim" data-target-content="home">Shop</button> -->
+				<button class="menu_button slim" data-target-content="current_action">战斗</button>
+				<button class="menu_button slim" data-target-content="assign_units">返回</button>
+			</div>
+			<div class="assign_unit_container">
+				<div class="page_section">
+					<div class="selected_item"></div><br>
+				</div>
+				<div class="set_counter_summary">
+					<div class="summary_title">统计</div>
+					<div class="item_stats"></div>
+					<button class="start_selling_button_2 disabled" onclick="assign_this_unit()">分配 1</button>
+					<button class="start_selling_button_2 disabled" onclick="assign_this_unit(true)">分配全部</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="content_options" class="page_container">
+			<div class="page_section">
+			
+				<button class="menu_button slim home_button" data-target-content="home">商店</button>			
+			</div>
+			<div class="options_container">
+				<div class="home_devider">声望</div>
+
+				<div class="page_section">
+				 
+				
+				
+					当前声望奖励： <span class="current_prestige_bonus"></span><br>
+					获得声望后： <span class="next_prestige_bonus"></span><br><br>
+					声望等级最高只能10级= =太高了买低级物品容易卡死<br>
+					T6后面物品买卖速度主要靠物品稀有度<br>					
+					声望等级基于有史以来拥有的最高位置数量。<br>
+					每一个声望等级都会使你的销售速度加倍。<br>
+					当你获得声望时，除了成就，AP和技能，游戏的每个部分都会重置。<br><br>
+					你每完成一个成就就获得一个AP。<br>
+					在第一次解锁后，你还可以获得每个位置的1个AP。<br>
+					目前的成就点: <span class="current_achievement_points"></span><br>
+					获得声望后的AP： <span class="next_achievement_points"></span><br><br>
+					<button class="danger" onclick="prestige_now();">重置</button><br><br>
+				</div>
+				<div class="home_devider">可选</div>
+				<div class="page_section">
+					降级模式将提供降级行动的选项。使用这个来平衡产品价格。<br>降级不会退款。<br>
+				</div>
+				<div class="page_section options_buttons">
+					
+				</div>
+				
+				<div class="home_devider"><br>重置游戏(没有确认)</div>
+				<div class="page_section">
+					这将完全重置你的游戏。<br>
+					<button class="danger" onclick="clearLocalStorage();location.reload();">重置</button><br><br>
+				</div>
+			</div>
+		</div>
+		<div id="content_unlock_location" class="page_container">
+			<div class="page_section">
+				<button class="menu_button slim danger" data-target-content="locations">取消</button>
+			</div>
+			<div class="unlockable_list"></div>
+		</div>
+		<div id="content_locations" class="page_container">
+			<div class="page_section">
+			
+				<button class="menu_button slim home_button" data-target-content="home">商店</button>
+			</div>
+			
+			<div class="explore_section">
+				位置<br>
+				<!-- <div class="exploration_level">
+					Exploration skill: <span class="skill_level_exploration"></span><br/>
+					Passive exploration: <span class="passive_exploration"></span><br/>
+					Upgrade cost: <span class="item_coins"></span> / <span class="passive_upgrade_cost"></span>
+					<button class="slim gold upgrade_passive_exploration_button" onclick="upgrade_passive_exploration()">Upgrade</button>
+				</div>
+				<div class="explore_bar">
+					<div class="explore_progress_bar">
+						<div class="explore_progress_bar_end">
+						</div>
+					</div>
+					<div class="explore_progress_text">
+					</div>
+				</div>
+				<button class="explore_button menu_button" data-target-content="unlock_location">Explore</button> -->
+			</div>
+		
+			<div class="known_locations">
+				<div class="known_locations_list">
+				</div>
+			</div>
+			<div class="location_buttons"></div>
+			
+		</div>
+		<div id="content_current_location" class="page_container">
+			<div class="current_location_bg"></div>
+			<div class="page_section">
+			
+				<button class="menu_button slim home_button" data-target-content="home">商店</button>
+				<button class="menu_button slim locations_button" data-target-content="locations">位置</button>
+					<button class="menu_button slim "onclick="功能()" data-target-content="home2">功能</button>
+			</div>
+			<div class="page_section">
+				<span class="current_location_title"></span>
+			</div>
+			
+			<div class="current_location_actions">
+				<span class="current_location_parsed_actions"></span>
+			</div>
+			<div class="unlock_more_actions_button_container"><button class="menu_button slim" data-target-content="unlock_more_actions">更多操作</button></div>
+		</div>
+		<div id="content_unlock_more_actions" class="page_container">
+			<div class="current_location_bg"></div>
+			<div class="page_section">
+				<button class="menu_button slim home_button" data-target-content="current_location">返回</button>
+			</div>
+			<div class="page_section">
+				<span class="current_location_title"></span>
+			</div>
+			
+			<div class="current_location_actions">
+				<span class="current_location_parsed_actions"></span>
+			</div>
+		</div>
+		<div id="content_current_action" class="page_container">
+			<div class="current_location_bg"></div>
+			<div class="page_section">
+				<button class="menu_button slim home_button" data-target-content="home">商店</button>
+				<button class="menu_button slim" data-target-content="current_location">返回</button>
+			</div>
+			<div class="current_action"></div>
+		</div>
+		<div class="detail_overlay">
+			<div class="card_detail"></div>
+		</div>
+	</div>
+
+<script>
+
+
+
+	function 读档管理(){ 
+	 
+	if (!window.confirm("你确定? 这将覆盖的存档？【存档错误可能会卡死！】")){
+			return;
+		}
+      var input = document.getElementById("存档管理3").value;
+	  
+	  if(input){  
+	  
+	  var inputtxt = decodeURIComponent(escape(atob(input)));
+	  
+	    window.localStorage.setItem("newgame", ""+inputtxt+"");
+		 window.location.href = window.location.href;		
+	}
+	};
+	
+    function 存档管理(){
+	
+	    var text = window.localStorage["newgame"];	
+        var input = document.getElementById("存档管理3");
+		
+        var txt = btoa(unescape(encodeURIComponent(text.toString())));		
+	 
+          input.value = txt; 
+          input.select(); 
+          document.execCommand("copy"); 
+          alert("复制成功，建议吧存档保存到安全的地方！");  
+	};
+
+
+function 功能(){
+
+    var Btn3 = document.getElementById("adiv3");
+    if (gamedata['inventory']['恶龙']>1|| gamedata['恶龙之魂']>1 ) {
+        Btn3.style.display = "block"; 
+		 
+    }
+    else  {
+        Btn3.style.display = "none";
+    }
+document.getElementById("adiv3").innerHTML = "隐藏化身恶龙";
+	
+	};
+
+	
+
+
+function test(obj){
+
+    var div1=document.getElementById("div2");
+    if(div1.style.display=="block"){
+        div1.style.display="none";
+      document.getElementById("adiv2").innerHTML = "经验兑换";
+    }else{
+        div1.style.display="block";
+       document.getElementById("adiv2").innerHTML = "隐藏经验兑换";
+    }
+}
+function test3(obj){
+
+    var div1=document.getElementById("div3");
+    if(div1.style.display=="block"){
+        div1.style.display="none";
+      document.getElementById("adiv3").innerHTML = "化身恶龙";
+    }else{
+        div1.style.display="block";
+       document.getElementById("adiv3").innerHTML = "隐藏化身恶龙";
+    }
+}
+function test4(obj){
+
+    var div1=document.getElementById("div4");
+    if(div1.style.display=="block"){
+        div1.style.display="none";
+      document.getElementById("adiv4").innerHTML = "存档管理";
+    }else{
+        div1.style.display="block";
+       document.getElementById("adiv4").innerHTML = "隐藏存档管理";
+    }
+}
+
+
+
+
+	function prestige_now(){
+		if(gamedata['prestige'] == undefined){gamedata['prestige'] = 0;}
+		var new_prestige_bonus = count_object(gamedata['known_locations']) -1;
+		if(gamedata['bonus_achievement_points'] == undefined)
+		{
+			gamedata['bonus_achievement_points'] = 0;
+		}
+		var new_ap_bonus = 0;
+		for (var i = count_object(gamedata['known_locations']) -1; i > 0; i--) {
+			new_ap_bonus += i;
+		};
+		gamedata['bonus_achievement_points'] += new_ap_bonus;
+		gamedata['achievement_points'] = get_achievement_points();
+		if(gamedata['prestige'] >= 10){new_prestige_bonus = 10;}
+		else if(gamedata['prestige'] > new_prestige_bonus){new_prestige_bonus = gamedata['prestige'] + 0;}		
+		console.log(new_prestige_bonus);
+		//clearLocalStorage();
+		//loadLocalStorage();
+		delete gamedata['inventory'];
+		gamedata['ap_bonusses'] = {};
+		gamedata['known_locations'] = {};
+		delete gamedata['counters'];
+		gamedata['coins'] = 0;
+		gamedata['coins_gained'] = 0;
+		gamedata['恶龙之力']= 0;
+		gamedata['prestige'] = new_prestige_bonus;
+		saveToLocalStorage();
+		show_content('home');         
+       window.location.href = window.location.href;		
+	};
+
+
+	function 兑换(){
+	      var 经验 =this.gamedata['inventory']['经验球']*10	
+		  document.getElementById("经验").innerHTML = "T1世界+"+经验+"经验！";
+          this.gamedata['skills']['世界']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+	};
+	function 兑换_村庄(){
+	      var 经验 =this.gamedata['inventory']['经验球']*5 		
+		  document.getElementById("村庄").innerHTML = "T2村庄+"+经验+"经验！";
+          this.gamedata['skills']['村庄']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};
+	function 兑换_矿洞(){
+	      var 经验 =this.gamedata['inventory']['经验球']*5 		 		
+		  document.getElementById("矿洞").innerHTML = "T2矿洞+"+经验+"经验！";
+          this.gamedata['skills']['矿洞']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};
+	function 兑换_海边(){
+	      var 经验 =this.gamedata['inventory']['经验球']*5 		 		
+		  document.getElementById("海边").innerHTML = "T2海边+"+经验+"经验！";
+          this.gamedata['skills']['海边']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};
+	function 兑换_游牧(){
+	      var 经验 =this.gamedata['inventory']['经验球']*2.5 		
+		  document.getElementById("游牧").innerHTML = "T3游牧+"+经验+"经验！";
+          this.gamedata['skills']['游牧']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};
+	function 兑换_农场(){
+	      var 经验 =this.gamedata['inventory']['经验球']*2.5	
+		  document.getElementById("农场").innerHTML = "T3农场+"+经验+"经验！";
+          this.gamedata['skills']['农场']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};
+	function 兑换_航海(){
+	      var 经验 =this.gamedata['inventory']['经验球']*2.5		
+		  document.getElementById("航海").innerHTML = "T3航海+"+经验+"经验！";
+          this.gamedata['skills']['航海']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};
+	function 兑换_王国(){
+	      var 经验 =this.gamedata['inventory']['经验球']*1.25
+		  document.getElementById("王国").innerHTML = "T4王国+"+经验+"经验！";
+          this.gamedata['skills']['王国']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};
+	function 兑换_战争(){
+	      var 经验 =this.gamedata['inventory']['经验球']*1.25 		
+		  document.getElementById("战争").innerHTML = "T4战争+"+经验+"经验！";
+          this.gamedata['skills']['战争']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};
+	function 兑换_地狱(){
+	      var 经验 =this.gamedata['inventory']['经验球']*1.25	
+		  document.getElementById("地狱").innerHTML = "T4地狱+"+经验+"经验！";
+          this.gamedata['skills']['地狱']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};
+	function 兑换_太空(){
+	      var 经验 =this.gamedata['inventory']['经验球']*0.625	
+		  document.getElementById("太空").innerHTML = "T5太空+"+经验+"经验！";
+          this.gamedata['skills']['太空']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};	
+	function 兑换_水星(){
+	      var 经验 =this.gamedata['inventory']['经验球']*0.625	
+		  document.getElementById("水星").innerHTML = "T5水星+"+经验+"经验！";
+          this.gamedata['skills']['水星']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};		
+	function 兑换_金星(){
+	      var 经验 =this.gamedata['inventory']['经验球']*0.625	
+		  document.getElementById("金星").innerHTML = "T5金星+"+经验+"经验！";
+          this.gamedata['skills']['金星']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};		
+	function 兑换_火星(){
+	      var 经验 =this.gamedata['inventory']['经验球']*0.625	
+		  document.getElementById("火星").innerHTML = "T5火星+"+经验+"经验！";
+          this.gamedata['skills']['火星']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};		
+	
+	
+	
+	
+	
+	
+	
+	function 恶龙之力_1(){
+	var 最高=gamedata['龙の爪']*0.1
+	var 最低=gamedata['龙の鳞']*0.1
+	      var 倍率 = Math.random()*(2+最高)+(1+最低)
+	       
+	      var 恶龙 =  Math.floor(this.gamedata['恶龙之力']*倍率)
+          this.gamedata['coins']+=恶龙		  
+          document.getElementById("恶龙之力1").innerHTML = "你掠夺了+"+恶龙+"硬币！";		  
+		  this.gamedata['恶龙之力'] =0
+		  
+	if (gamedata['龙の爪'] > 199) {	gamedata['龙の爪'] = 200}	
+	if (gamedata['龙の鳞'] > 199) {	gamedata['龙の鳞'] = 200}
+	if (gamedata['龙の角'] > 99) {	gamedata['龙の角'] = 100}	   	  
+		  
+	};
+	function 恶龙之力_2(){
+
+	
+	if (gamedata['inventory']['恶龙']>99) {
+	      var 恶龙 =  Math.floor(this.gamedata['inventory']['恶龙'])
+		  this.gamedata['恶龙之魂']+=恶龙	  
+		  this.gamedata['inventory']['恶龙'] =0
+        }
+		
+	   $('.w4').html(gamedata['恶龙之魂']);
+  
+	};
+	function 恶龙之力_3(){
+
+	var 需求=10000+gamedata['龙の鳞']*1500+gamedata['龙の爪']*1000+gamedata['龙の角']*2000  
+
+	if (gamedata['恶龙之力']>需求) {
+		 this.gamedata['恶龙之力']-=需求
+		 var 触发 = Math.floor(Math.random()*100+1)
+	if (触发>60&&gamedata['龙の爪'] <= 199) {	gamedata['龙の爪'] += 1
+	 document.getElementById("恶龙之力4").innerHTML = "龙の爪+1";}	
+	else if (触发>30&&gamedata['龙の鳞'] <= 199) {	gamedata['龙の鳞'] += 1
+	 document.getElementById("恶龙之力4").innerHTML = "龙の鳞+1";}
+	else if (触发>10&&gamedata['龙の角'] <= 99) {	gamedata['龙の角'] += 1
+	 document.getElementById("恶龙之力4").innerHTML = "龙の角+1";}	 
+	else {	
+	 document.getElementById("恶龙之力4").innerHTML = "什么都没发生";}	 
+        }
+	else{ document.getElementById("恶龙之力4").innerHTML = "需要"+需求+"恶龙之力";}	
+	 
+  
+	};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	function show_options(){
+
+		if(gamedata['downgrade_mode'] == undefined)
+		{
+			gamedata['downgrade_mode'] == false;
+		}
+		$('.options_buttons').html('');
+		if(gamedata['downgrade_mode'] == true)
+		{
+			$('.options_buttons').append('<button class="menu_button" onclick="gamedata[\'downgrade_mode\']=false" data-target-content="options">降级 开</button>');
+		}
+		else
+		{
+			$('.options_buttons').append('<button class="menu_button danger"  onclick="gamedata[\'downgrade_mode\']=true" data-target-content="options">降级 关</button>');
+		}
+
+		if(gamedata['prestige'] == undefined){gamedata['prestige'] = 0;}
+		$('.current_prestige_bonus').html(gamedata['prestige']);
+
+		var new_prestige_bonus = count_object(gamedata['known_locations']) -1;
+		if(gamedata['prestige'] > new_prestige_bonus){new_prestige_bonus = gamedata['prestige'] + 0;}
+		$('.next_prestige_bonus').html(new_prestige_bonus);
+		var new_achievement_points = get_achievement_points();
+		$('.current_achievement_points').html(gamedata['achievement_points']);
+		var new_ap_bonus = 0;
+		for (var i = count_object(gamedata['known_locations']) -1; i > 0; i--) {
+			new_ap_bonus += i;
+		};
+		$('.next_achievement_points').html(new_achievement_points + new_ap_bonus);
+	}
+
+	var gamedata = loadLocalStorage();
+
+	$(document).ready(function() {
+		$('body').on('click', '.menu_button', function() {
+		    $('.menu_button.active').removeClass('active');
+			$(this).addClass('active');
+			show_content($(this).attr('data-target-content'));
+		});
+	});
+
+	var last_content = 'home';
+	var current_content = 'home';
+
+	function show_last_content(){
+		show_content(last_content);
+	}
+
+	function update_last_content(new_content){
+		last_content = current_content;
+		current_content = new_content;
+	}
+
+	function show_content(content_id){
+		if(content_id == 'back'){content_id = last_content;}
+		update_last_content(content_id);
+		//console.log(content_id);
+		if(content_id == undefined){content_id = 'home';}
+		$('.page_container.active').removeClass('active');
+		$('#content_' + content_id).addClass('active');
+
+		var possible_extra_function = window['show_' + content_id]; 
+		if (typeof possible_extra_function === "function") possible_extra_function();
+	};
+
+	$('.detail_overlay').click(function(){
+		$('.detail_overlay').html('');
+		$('.detail_overlay').fadeOut();
+	});
+
+	
+	var global_timer;
+	var last_global_tick = new Date();
+
+	$(document).ready(function(){
+		show_home();
+		check_global_timer();
+        
+	});
+
+	function check_global_timer(){
+
+		var time_passed = new Date() - last_global_tick;
+		last_global_tick = new Date();
+		update_counter_timers();
+		check_ticks(time_passed);
+		
+		var tick_time = 100;
+		var next_tick_delay = (tick_time * 2) - time_passed;
+		if(next_tick_delay < (tick_time / 2))
+		{
+			next_tick_delay = (tick_time / 2);
+		}
+		if(next_tick_delay > (tick_time))
+		{
+			next_tick_delay = tick_time;
+		}
+		global_timer = setTimeout(function(){
+			check_global_timer();
+		},next_tick_delay);
+	
+	if(gamedata['恶龙之力'] == undefined){gamedata['恶龙之力'] = 0;}
+	if(gamedata['恶龙之魂'] == undefined){gamedata['恶龙之魂'] = 0;}
+	if(gamedata['龙の爪'] == undefined){gamedata['龙の爪'] = 0;}
+	if(gamedata['龙の鳞'] == undefined){gamedata['龙の鳞'] = 0;}
+	if(gamedata['龙の角'] == undefined){gamedata['龙の角'] = 0;}
+
+	if (gamedata['inventory']['恶龙']<10000){
+	var 恶龙力=gamedata['inventory']['恶龙'];
+	}else{ var 恶龙力=10000 }
+	
+
+	  if (gamedata['inventory']['恶龙']>99&&gamedata['恶龙之力'] <= 10000000) {
+         this.gamedata['恶龙之力']+=(恶龙力*0.1)*(1+gamedata['龙の角']*0.01)
+    }
+	  if (gamedata['恶龙之魂']>1&&gamedata['恶龙之力'] <= 10000000) {
+        this.gamedata['恶龙之力']+=(gamedata['恶龙之魂']*0.001)*(1+gamedata['龙の角']*0.01)
+    }
+
+	   $('.w1').html(gamedata['inventory']['经验球']);
+	   $('.w2').html(gamedata['inventory']['恶龙']); 
+	   
+	   var 恶龙=gamedata['恶龙之力']
+       $('.w3').html(Math.floor(恶龙));
+	   $('.w4').html(gamedata['恶龙之魂']);
+	   $('.w5').html(gamedata['龙の爪']+"级");
+       $('.w6').html(gamedata['龙の鳞']+"级");
+	   $('.w7').html(gamedata['龙の角']+"级");
+	};
+
+	function requestFullScreen(element) {
+	    // Supports most browsers and their versions.
+	    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+
+	    if (requestMethod) { // Native full screen.
+	        requestMethod.call(element);
+	    } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+	        var wscript = new ActiveXObject("WScript.Shell");
+	        if (wscript !== null) {
+	            wscript.SendKeys("{F11}");
+	        }
+	    }
+	}
+	
+
+	
+	
+	
+	
+
+	var elem = document.body; // Make the body go full screen.
+	requestFullScreen(elem);
+
+</script>
+<!--客服 开始-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/g8hh/g8hh.github.io/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="https://cdn.jsdelivr.net/gh/g8hh/g8hh.github.io/static/js/kf.js"></script>
+<!-- 客服 结束 -->
+<!--站长统计-->
+    <div style="display: none">
+       <script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1280006740&web_id=1280006740"></script>
+    </div>
+</body></html>
