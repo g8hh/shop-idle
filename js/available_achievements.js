@@ -78,17 +78,17 @@ var available_ap_bonusses = {
 
 	勇者斗恶龙: {
 		name: 	'勇者斗恶龙',
-		text: 	'勇者斗恶龙获取属性提升百分百。【点此技能需求100恶龙魂.重置不退还恶龙魂】',
+		text: 	'勇者斗恶龙获取属性提升30%。【点此技能需求100恶龙魂.重置不退还恶龙魂】',
 		background_item: 	'恶龙',
 		cost: 			1,
 		cost2: 			1,		
 		required_items:{
 		},
 		item_bonus:{	
-			体力: 	100,
-			力量: 	100,	
-			战利品: 	100,
-			exp: 	100,					
+			体力: 	30,
+			力量: 	30,	
+			战利品: 	30,
+			exp: 	30,					
 		},
 		skill_bonus:{
 				
@@ -179,6 +179,19 @@ var available_ap_bonusses = {
 		skill_bonus:{		
 		}
 	},		
+	寻宝3: {
+		name: 	'寻宝3专精',
+		text: 	'每级增加百分10龙锭，黑龙产出',
+		background_item: 	'黑龙',
+		cost: 			1,
+		item_bonus:{
+			龙锭: 	10,	
+			黑龙: 	10,				
+		},
+		skill_bonus:{		
+		}
+	},			
+	
 	房屋: {
 		name: 	'建房专精',
 		text: 	'每级增加百分10木屋，山洞，房屋产出',
@@ -247,9 +260,39 @@ var available_ap_bonusses = {
 		skill_bonus:{		
 		}
 	},	
-
-
-
+	光能: {
+		name: 	'光能专精',
+		text: 	'每级增加百分10光能产出',
+		background_item: 	'光能',
+		cost: 			5,
+		item_bonus:{
+			光能: 	10,				
+		},
+		skill_bonus:{		
+		}
+	},	
+	生物细胞: {
+		name: 	'生物学家',
+		text: 	'每级增加百分10生物细胞产出',
+		background_item: 	'生物细胞',
+		cost: 			3,
+		item_bonus:{
+			生物细胞: 	10,				
+		},
+		skill_bonus:{		
+		}
+	},	
+	小行星矿: {
+		name: 	'加强太空探索',
+		text: 	'每级增加百分10小行星矿产出',
+		background_item: 	'小行星矿',
+		cost: 			2,
+		item_bonus:{
+			小行星矿: 	10,				
+		},
+		skill_bonus:{		
+		}
+	},
 	
 	
 	

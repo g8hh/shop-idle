@@ -2723,6 +2723,129 @@ var available_actions = {
 			影响力: 	4000,					
 		}
 	},		
+	 t4n1_18:{
+		name: 			'科研中心',
+		unlock_name: 	'建设科研中心',	
+		bonus_loot:{	
+			科技: 	6666,			
+		},			
+		chance: 		50,
+		skill: 			'王国',
+		action_name: 		'研究',
+		fail_text: 		'什么都没有',
+	    passive_factor: 	50000,			
+		难度倍数:        10,
+		cost:{			
+			合金: 	1,			
+		},
+		unlock_cost:{	
+			市民: 	400,		
+			合金: 	50,
+			领土: 	100000,				
+			影响力: 	50000,			
+		}
+	},		
+	 t4n1_19:{
+		name: 			'光能收集器',
+		unlock_name: 	'建设光能收集器',	
+		bonus_loot:{	
+			光能: 	122,			
+		},			
+		chance: 		50,
+		skill: 			'王国',
+		action_name: 		'收集',
+		fail_text: 		'没有收集到光能',
+	    passive_factor: 	50000,	
+		upgrade_item: 		'合金',				
+		难度倍数:        10,
+		cost:{				
+			科技: 	1,			
+		},
+		unlock_cost:{	
+			市民: 	200,		
+			合金: 	30,
+			领土: 	80000,				
+			科技: 	5000,			
+		}
+	},	
+	 t4n1_20:{
+		name: 			'航天基地',
+		unlock_name: 	'建设航天基地',	
+		bonus_loot:{	
+			宇航员: 	100,			
+		},			
+		chance: 		50,
+		skill: 			'王国',
+		action_name: 		'训练',
+		fail_text: 		'？？？',
+	    passive_factor: 	50000,				
+		难度倍数:        10,
+		cost:{				
+			市民: 	1,	
+			合金: 	1,	
+			光能: 	10,				
+			科技: 	20,					
+		},
+		unlock_cost:{	
+			市民: 	600,		
+			合金: 	80,
+			光能: 	100,			
+			领土: 	300000,				
+			科技: 	10000,			
+		}
+	},		
+	 t4n1_21:{
+		name: 			'建造航天飞船【开启T5初级阶段主要位置】',
+		unlock_name: 	'研究航天飞船【开启T5初级阶段主要位置】',	
+		bonus_loot:{	
+			飞船: 	100,			
+		},			
+		chance: 		50,
+		skill: 			'王国',
+		action_name: 		'建造',
+		fail_text: 		'？？？？',
+	    passive_factor: 	50000,				
+		难度倍数:        20,
+		cost:{				
+			宇航员: 	1,	
+			合金: 	5,	
+			光能: 	25,				
+			科技: 	100,					
+		},
+		unlock_cost:{								
+			科技: 	12000,			
+		}
+	},		
+	 t4n1_22:{
+		name: 			'建造运载飞船',
+		unlock_name: 	'研究运载飞船',	
+		bonus_loot:{	
+			运载飞船: 	100,			
+		},			
+		chance: 		50,
+		skill: 			'王国',
+		action_name: 		'建造',
+		fail_text: 		'？？？？',
+	    passive_factor: 	50000,				
+		难度倍数:        20,
+		cost:{				
+			市民: 	30,	
+			合金: 	5,	
+			光能: 	25,				
+			科技: 	100,					
+		},
+		unlock_cost:{								
+			科技: 	30000,			
+		}
+	},		
+	
+	
+	
+	
+	
+	
+	
+	
 //============================t5==========================
 
 	 t5n1_1:{
@@ -2996,6 +3119,29 @@ var available_actions = {
 			金币: 	1000,							
 			影响力: 	5000,								
 		}
+	},	
+	 t5n1_12:{
+		name: 			'人体研究学院',
+		unlock_name: 	'建设人体研究学院【研究人体】',	
+		bonus_loot:{	
+			科技: 	6666,				
+		},			
+		chance: 		100,
+		skill: 			'地狱',
+		action_name: 		'制作',
+		fail_text: 		'？？？',
+	    passive_factor: 	10000,				
+		难度倍数:        20,
+		cost:{							
+			奴隶: 	300,
+			金币: 	6000,			
+		},
+		unlock_cost:{	
+			奴隶: 	75000,		
+			合金: 	20,
+			领土: 	50000,				
+			科技: 	4000,								
+		}
 	},		
 //===============地狱=======================================	
 	
@@ -3260,17 +3406,300 @@ var available_actions = {
 			影响力: 	5000,								
 		}
 	},		
+	 t5n2_12:{
+		name: 			'地狱研究学院',
+		unlock_name: 	'建设地狱研究学院【研究精血】',	
+		bonus_loot:{	
+			科技: 	6666,				
+		},			
+		chance: 		100,
+		skill: 			'地狱',
+		action_name: 		'制作',
+		fail_text: 		'？？？',
+	    passive_factor: 	10000,				
+		难度倍数:        20,
+		cost:{							
+			精血: 	500,
+			金币: 	1000,			
+		},
+		unlock_cost:{	
+			精血: 	10000,		
+			合金: 	20,
+			领土: 	50000,				
+			科技: 	4000,								
+		}
+	},		
+
+	//===============T6=======================================	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	    t6n1_1:{
+		name: 			'探索附近太空',
+		unlock_name: 	'探索附近太空',	
+		bonus_loot:{	
+			小行星矿: 	80,
+			太空生物: 	70,	
+			黑龙: 	0.1,			
+		},			
+		chance: 		100,
+		skill: 			'太空',
+		action_name: 		'探索',
+		fail_text: 		'什么都没找到',
+	    passive_factor: 	100000,	
+		upgrade_item: 		'飞船',			
+		难度倍数:        5,
+		cost:{							
+			光能: 5,		
+		},
+		unlock_cost:{								
+		}
+	},		
+	    t6n1_2:{
+		name: 			'空间站',
+		unlock_name: 	'建设空间站',	
+		bonus_loot:{	
+			光能: 	1555,
+			小行星矿: 8,			
+			太空生物: 7,				
+			黑龙: 	0.01,			
+		},			
+		chance: 		100,
+		skill: 			'太空',
+		action_name: 		'收集',
+		fail_text: 		'什么都没找到',
+	    passive_factor: 	100000,				
+		难度倍数:        10,
+		cost:{							
+			科技: 10,				
+		},
+		unlock_cost:{
+			飞船: 	5,		
+			合金: 	300,
+			光能: 	300,				
+			科技: 	15000,				
+		}
+	},	
+	    t6n1_3:{
+		name: 			'开采小行星',
+		unlock_name: 	'开采小行星',	
+		bonus_loot:{	
+			秘银: 	122,		
+			玄铁: 	244,				
+			精金: 	244,		
+			魂钢: 	122,
+			龙锭: 	0.05,			
+		},			
+		chance: 		100,
+		skill: 			'太空',
+		action_name: 		'开采',
+		fail_text: 		'什么都没找到',
+	    passive_factor: 	100000,				
+		难度倍数:        2,
+		cost:{							
+			小行星矿: 1,	
+			光能: 10,				
+		},
+		unlock_cost:{	
+		    飞船: 1,
+			科技: 	8000,				
+		}
+	},		
+	    t6n1_4:{
+		name: 			'猎杀太空生物',
+		unlock_name: 	'猎杀太空生物',	
+		bonus_loot:{	
+			生物细胞: 	100,	
+			经验球: 	1111,			
+		},			
+		chance: 		100,
+		skill: 			'太空',
+		action_name: 		'开采',
+		fail_text: 		'什么都没找到',
+	    passive_factor: 	100000,	
+		upgrade_item: 		'飞船',			
+		难度倍数:        2,
+		cost:{		
+			太空生物: 1,
+			光能: 5,			
+		},
+		unlock_cost:{	
+		    飞船: 1,
+			光能: 	500,				
+		}
+	},	
+	    t6n1_5:{
+		name: 			'研究站',
+		unlock_name: 	'建设研究站',	
+		bonus_loot:{	
+			科技: 	2333,		
+		},			
+		chance: 		100,
+		skill: 			'太空',
+		action_name: 		'研究',
+		fail_text: 		'什么都没找到',
+	    passive_factor: 	100000,				
+		难度倍数:        3,
+		cost:{							
+			生物细胞: 1,
+			光能: 5,				
+		},
+		unlock_cost:{
+			生物细胞: 	10,			
+			飞船: 	5,		
+			合金: 	300,
+			光能: 	1000,				
+			科技: 	15000,				
+		}
+	},		
+	    t6n1_6:{
+		name: 			'太空熔炉',
+		unlock_name: 	'建设太空熔炉',	
+		bonus_loot:{	
+			合金: 	300,		
+		},			
+		chance: 		100,
+		skill: 			'太空',
+		action_name: 		'熔炼',
+		fail_text: 		'什么都没找到',
+	    passive_factor: 	100000,				
+		难度倍数:        3,
+		cost:{	
+			秘银: 	1,		
+			玄铁: 	1,				
+			精金: 	1,		
+			魂钢: 	1,		
+			生物细胞: 1,
+			光能: 10,				
+		},
+		unlock_cost:{
+			生物细胞: 	10,			
+			飞船: 	5,		
+			合金: 	500,
+			光能: 	1000,				
+			科技: 	20000,				
+		}
+	},		
+	    t6n1_7:{
+		name: 			'太空武器库',
+		unlock_name: 	'建设太空武器库',	
+		bonus_loot:{	
+			生物武器: 	100,		
+		},			
+		chance: 		100,
+		skill: 			'太空',
+		action_name: 		'熔炼',
+		fail_text: 		'什么都没找到',
+	    passive_factor: 	100000,				
+		难度倍数:        3,
+		cost:{		
+			合金: 	1,		
+			生物细胞: 2,
+			光能: 10,				
+		},
+		unlock_cost:{
+			生物细胞: 	10,			
+			飞船: 	5,		
+			合金: 	400,
+			光能: 	1200,				
+			科技: 	25000,				
+		}
+	},		
+	    t6n1_8:{
+		name: 			'建造战斗飞船',
+		unlock_name: 	'建造战斗飞船',	
+		bonus_loot:{	
+			战斗飞船: 	100,		
+		},			
+		chance: 		100,
+		skill: 			'太空',
+		action_name: 		'熔炼',
+		fail_text: 		'什么都没找到',
+	    passive_factor: 	100000,				
+		难度倍数:        20,
+		cost:{		
+			宇航员: 	1,
+			生物武器: 	1,			
+			合金: 	5,	
+			光能: 	25,				
+			科技: 	100,					
+		},
+		unlock_cost:{
+			生物细胞: 	10,			
+			飞船: 	5,		
+			合金: 	400,
+			光能: 	1200,				
+			科技: 	25000,				
+		}
+	},	
+	    t6n1_9:{
+		name: 			'扩大探索太空',
+		unlock_name: 	'扩大探索太空',	
+		bonus_loot:{	
+			太空生物: 	3333,	
+			黑龙: 	1,		
+			龙锭: 	0.5,					
+		},			
+		chance: 		100,
+		skill: 			'太空',
+		action_name: 		'探索',
+		fail_text: 		'什么都没找到',
+	    passive_factor: 	100000,	
+		upgrade_item: 		'战斗飞船',			
+		难度倍数:        50,
+		cost:{							
+			光能: 100,		
+		},
+		unlock_cost:{	
+			战斗飞船: 	1,				
+		}
+	},		
+	    t6n1_10:{
+		name: 			'剿灭太空生物',
+		unlock_name: 	'剿灭太空生物',	
+		bonus_loot:{	
+			生物细胞: 	1000,	
+			经验球: 	11111,			
+		},			
+		chance: 		100,
+		skill: 			'太空',
+		action_name: 		'开采',
+		fail_text: 		'什么都没找到',
+	    passive_factor: 	100000,	
+		upgrade_item: 		'战斗飞船',			
+		难度倍数:        2,
+		cost:{		
+			太空生物: 10,
+			光能: 25,			
+		},
+		unlock_cost:{	
+		    战斗飞船: 1,
+			光能: 	2500,				
+		}
+	},		
+	    t6n1_11:{
+		name: 			'组建殖民舰队【开启下个地点主要位置】',
+		unlock_name: 	'组建殖民舰队【开启下个地点主要位置】',	
+		bonus_loot:{	
+			殖民舰队: 	100,		
+		},			
+		chance: 		100,
+		skill: 			'太空',
+		action_name: 		'组建',
+		fail_text: 		'什么都没找到',
+	    passive_factor: 	1000000,				
+		难度倍数:        500,
+		cost:{		
+		    飞船: 	10,			
+		    运载飞船: 	30,		
+			战斗飞船: 	20,
+			光能: 	10000,					
+		},
+		unlock_cost:{
+		    飞船: 	1,			
+		    运载飞船: 	1,		
+			战斗飞船: 	1,
+			光能: 	100,				
+		}
+	},	
 	
 	
 	

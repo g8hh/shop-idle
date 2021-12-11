@@ -221,6 +221,58 @@
 	border-color: rgba(255, 255, 107,0.6);
 }
 
+.selected_item.rarity_8,
+.single_counter.rarity_8,
+.item.rarity_8
+{
+	border-color: rgba(144, 238 ,144, 0.5);
+}
+
+.selected_item.rarity_9,
+.single_counter.rarity_9,
+.item.rarity_9
+{
+	border-color: rgba(0,186,255, 0.5);
+}
+
+.selected_item.rarity_10,
+.single_counter.rarity_10,
+.item.rarity_10
+{
+	border-color: rgba(38,0,255,0.5);
+}
+
+.selected_item.rarity_11,
+.single_counter.rarity_11,
+.item.rarity_11
+{
+	border-color: rgba(49,190,93,0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .item_list .item
 {
 	cursor: pointer;

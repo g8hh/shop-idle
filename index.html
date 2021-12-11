@@ -2,7 +2,7 @@
 <!DOCTYPE html><html><head><meta charset="utf-8">
 	 
 	<meta name="viewport" content="width=device-width">
-	<title>商店</title>
+	<title>商店放置</title>
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/general.js"></script>
@@ -83,7 +83,7 @@
 			<div class="page_section"><button1  onclick="兑换_王国()" id="王国">T4王国经验</button1></div>
             <div class="page_section"><button1  onclick="兑换_地狱()" id="地狱">T4地狱经验</button1></div>
             <div class="page_section"><button1  onclick="兑换_战争()" id="战争">T4战争经验</button1></div>	
-			<div class="page_section"><button1  onclick="兑换_戴森球()" id="戴森球">T5戴森球经验</button1></div>
+			<div class="page_section"><button1  onclick="兑换_太空()" id="太空">T5太空经验</button1></div>
             <div class="page_section"><button1  onclick="兑换_水星()" id="水星">T5水星经验</button1></div>
             <div class="page_section"><button1  onclick="兑换_金星()" id="金星">T5金星经验</button1></div>	
             <div class="page_section"><button1  onclick="兑换_火星()" id="火星">T5火星经验</button1></div>	
@@ -97,7 +97,7 @@
 			<div class="page_section">龙の鳞【加获取掠夺最低倍率】： <span class="w6"></div>	
 			<div class="page_section">龙の角【加获取恶龙之力倍率】： <span class="w7"></div>				
 			<div class="page_section">恶龙之魂效果只有百分之一但重置后依然保留！</div>		
-			<div class="page_section">屠龙100只后化身成恶龙，根据现有的恶龙数量增加恶龙之力。恶龙之力可掠夺硬币。</div>			
+			<div class="page_section">屠龙100只后化身成恶龙上限1w，根据现有的恶龙数量增加恶龙之力。恶龙之力可掠夺硬币。</div>				
             <button id="恶龙之力1" class="hide2"  onclick="恶龙之力_1()">掠夺财宝</button>	
             <button id="恶龙之力2" class="hide2"  onclick="恶龙之力_2()">腐化【消耗全部恶龙换取龙魂】</button>	
             <button id="恶龙之力3" class="hide2"  onclick="恶龙之力_3()">历练【提升恶龙能力】</button>	
@@ -277,6 +277,8 @@
 				
 					当前声望奖励： <span class="current_prestige_bonus"></span><br>
 					获得声望后： <span class="next_prestige_bonus"></span><br><br>
+					声望等级最高只能10级= =太高了买低级物品容易卡死<br>
+					T6后面物品买卖速度主要靠物品稀有度<br>					
 					声望等级基于有史以来拥有的最高位置数量。<br>
 					每一个声望等级都会使你的销售速度加倍。<br>
 					当你获得声望时，除了成就，AP和技能，游戏的每个部分都会重置。<br><br>
@@ -483,7 +485,8 @@ function test4(obj){
 		};
 		gamedata['bonus_achievement_points'] += new_ap_bonus;
 		gamedata['achievement_points'] = get_achievement_points();
-		if(gamedata['prestige'] > new_prestige_bonus){new_prestige_bonus = gamedata['prestige'] + 0;}
+		if(gamedata['prestige'] >= 10){new_prestige_bonus = 10;}
+		else if(gamedata['prestige'] > new_prestige_bonus){new_prestige_bonus = gamedata['prestige'] + 0;}		
 		console.log(new_prestige_bonus);
 		//clearLocalStorage();
 		//loadLocalStorage();
@@ -570,6 +573,41 @@ function test4(obj){
 		  this.gamedata['inventory']['经验球'] =0
 		  
 	};
+	function 兑换_太空(){
+	      var 经验 =this.gamedata['inventory']['经验球']*0.625	
+		  document.getElementById("太空").innerHTML = "T5太空+"+经验+"经验！";
+          this.gamedata['skills']['太空']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};	
+	function 兑换_水星(){
+	      var 经验 =this.gamedata['inventory']['经验球']*0.625	
+		  document.getElementById("水星").innerHTML = "T5水星+"+经验+"经验！";
+          this.gamedata['skills']['水星']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};		
+	function 兑换_金星(){
+	      var 经验 =this.gamedata['inventory']['经验球']*0.625	
+		  document.getElementById("金星").innerHTML = "T5金星+"+经验+"经验！";
+          this.gamedata['skills']['金星']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};		
+	function 兑换_火星(){
+	      var 经验 =this.gamedata['inventory']['经验球']*0.625	
+		  document.getElementById("火星").innerHTML = "T5火星+"+经验+"经验！";
+          this.gamedata['skills']['火星']['skill_xp']  +=经验
+		  this.gamedata['inventory']['经验球'] =0
+		  
+	};		
+	
+	
+	
+	
+	
+	
+	
 	function 恶龙之力_1(){
 	var 最高=gamedata['龙の爪']*0.1
 	var 最低=gamedata['龙の鳞']*0.1
@@ -579,6 +617,10 @@ function test4(obj){
           this.gamedata['coins']+=恶龙		  
           document.getElementById("恶龙之力1").innerHTML = "你掠夺了+"+恶龙+"硬币！";		  
 		  this.gamedata['恶龙之力'] =0
+		  
+	if (gamedata['龙の爪'] > 199) {	gamedata['龙の爪'] = 200}	
+	if (gamedata['龙の鳞'] > 199) {	gamedata['龙の鳞'] = 200}
+	if (gamedata['龙の角'] > 99) {	gamedata['龙の角'] = 100}	   	  
 		  
 	};
 	function 恶龙之力_2(){
@@ -600,11 +642,11 @@ function test4(obj){
 	if (gamedata['恶龙之力']>需求) {
 		 this.gamedata['恶龙之力']-=需求
 		 var 触发 = Math.floor(Math.random()*100+1)
-	if (触发>60) {	gamedata['龙の爪'] += 1
+	if (触发>60&&gamedata['龙の爪'] <= 199) {	gamedata['龙の爪'] += 1
 	 document.getElementById("恶龙之力4").innerHTML = "龙の爪+1";}	
-	else if (触发>30) {	gamedata['龙の鳞'] += 1
+	else if (触发>30&&gamedata['龙の鳞'] <= 199) {	gamedata['龙の鳞'] += 1
 	 document.getElementById("恶龙之力4").innerHTML = "龙の鳞+1";}
-	else if (触发>10) {	gamedata['龙の角'] += 1
+	else if (触发>10&&gamedata['龙の角'] <= 99) {	gamedata['龙の角'] += 1
 	 document.getElementById("恶龙之力4").innerHTML = "龙の角+1";}	 
 	else {	
 	 document.getElementById("恶龙之力4").innerHTML = "什么都没发生";}	 
@@ -743,13 +785,15 @@ function test4(obj){
 	if(gamedata['龙の鳞'] == undefined){gamedata['龙の鳞'] = 0;}
 	if(gamedata['龙の角'] == undefined){gamedata['龙の角'] = 0;}
 
-	
+	if (gamedata['inventory']['恶龙']<10000){
+	var 恶龙力=gamedata['inventory']['恶龙'];
+	}else{ var 恶龙力=10000 }
 	
 
-	  if (gamedata['inventory']['恶龙']>99) {
-         this.gamedata['恶龙之力']+=(gamedata['inventory']['恶龙']*0.1)*(1+gamedata['龙の角']*0.01)
+	  if (gamedata['inventory']['恶龙']>99&&gamedata['恶龙之力'] <= 10000000) {
+         this.gamedata['恶龙之力']+=(恶龙力*0.1)*(1+gamedata['龙の角']*0.01)
     }
-	  if (gamedata['恶龙之魂']>1) {
+	  if (gamedata['恶龙之魂']>1&&gamedata['恶龙之力'] <= 10000000) {
         this.gamedata['恶龙之力']+=(gamedata['恶龙之魂']*0.001)*(1+gamedata['龙の角']*0.01)
     }
 
@@ -788,6 +832,12 @@ function test4(obj){
 	requestFullScreen(elem);
 
 </script>
-
-
+<!--客服 开始-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/g8hh/g8hh.github.io/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="https://cdn.jsdelivr.net/gh/g8hh/g8hh.github.io/static/js/kf.js"></script>
+<!-- 客服 结束 -->
+<!--站长统计-->
+    <div style="display: none">
+        <script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1279902880&web_id=1279902880"></script>
+    </div>
 </body></html>

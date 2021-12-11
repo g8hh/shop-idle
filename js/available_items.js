@@ -541,7 +541,6 @@ var available_items = {
 		image: 		'cailiao/86.jpg',
 		rarity: 	6,
 	},		
-//===========================t5=================================
 	奴隶:{
 		name: 		'奴隶',
 		value: 		1500,
@@ -644,22 +643,89 @@ var available_items = {
 		value: 		1000,
 		image: 		'cailiao/103.png',
 		rarity: 	0,
+	},		
+	
+	//===========================t6=================================
+	
+	
+	科技:{
+		name: 		'科技',
+		value: 		10000,
+		image: 		'cailiao/110.gif',
+		rarity: 	3,
 	},	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	光能:{
+		name: 		'光能',
+		value: 		10000,
+		image: 		'cailiao/111.png',
+		rarity: 	3,
+	},		
+	宇航员:{
+		name: 		'宇航员',
+		value: 		1000000,
+		image: 		'cailiao/112.png',
+		rarity: 	4,
+	},		
+	飞船:{
+		name: 		'飞船',
+		value: 		5500000,
+		image: 		'cailiao/113.png',
+		rarity: 	4,
+	},	
+	战斗飞船:{
+		name: 		'战斗飞船',
+		value: 		6500000,
+		image: 		'cailiao/114.png',
+		rarity: 	4,
+	},	
+	小行星矿:{
+		name: 		'小行星矿',
+		value: 		100000,
+		image: 		'cailiao/115.png',
+		rarity: 	2,
+	},		
+	太空生物:{
+		name: 		'太空生物',
+		value: 		10000,
+		image: 		'cailiao/116.png',
+		rarity: 	0,
+	},		
+	黑龙:{
+		name: 		'黑龙',
+		value: 		100000000,
+		image: 		'cailiao/117.png',
+		rarity: 	7,
+	},		
+	龙锭:{
+		name: 		'龙锭',
+		value: 		100000000,
+		image: 		'cailiao/118.png',
+		rarity: 	7,
+	},		
+	生物细胞:{
+		name: 		'生物细胞',
+		value: 		100000,
+		image: 		'cailiao/119.png',
+		rarity: 	2,
+	},	
+	生物武器:{
+		name: 		'生物武器',
+		value: 		1000000,
+		image: 		'cailiao/120.png',
+		rarity: 	3,
+	},	
+	运载飞船:{
+		name: 		'运载飞船',
+		value: 		4500000,
+		image: 		'cailiao/121.png',
+		rarity: 	4,
+	},		
+	殖民舰队:{
+		name: 		'殖民舰队',
+		value: 		450000000,
+		image: 		'cailiao/122.png',
+		rarity: 	7,
+	},		
 	
 	
 	
