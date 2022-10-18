@@ -293,7 +293,16 @@ var available_ap_bonusses = {
 		skill_bonus:{		
 		}
 	},
-	
+	殖民地繁荣等级: {
+		name: 	'殖民地繁荣等级',
+		text: 	'殖民地繁荣等级',
+		background_item: 	'戴森云',
+		cost: 			100,
+		item_bonus:{			
+		},
+		skill_bonus:{		
+		}
+	},	
 	
 	
 	

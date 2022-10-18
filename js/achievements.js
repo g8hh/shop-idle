@@ -328,7 +328,11 @@ function get_achievement_points(){
 	$.each(gamedata['achievements'], function(achievement_id, achievement_info){
 		achievement_points += achievement_info['level'];
 	});
-	achievement_points += gamedata['bonus_achievement_points'];
+	 achievement_points += gamedata['bonus_achievement_points']
+	
+	if(achievement_points>=200){achievement_points=200}
+	
+	
 	return achievement_points;
 }
 
@@ -408,7 +412,7 @@ function buy_ap_bonus(ap_id){
 		}
 
 		gamedata['ap_bonusses'][ap_id]['level']++;
-		saveToLocalStorage();
+		//saveToLocalStorage();
 		show_single_ap_bonus();
 	}
 	if(available_ap_bonusses[ap_id] != undefined && 100 <= gamedata['恶龙之魂']&&available_ap_bonusses[ap_id]['cost2'] == 1)
@@ -424,7 +428,7 @@ function buy_ap_bonus(ap_id){
         gamedata['恶龙之魂']-=100   
 		gamedata['ap_bonusses'][ap_id]['level']++;
 		
-		saveToLocalStorage();
+		//saveToLocalStorage();
 		show_single_ap_bonus();
 	}	
 	

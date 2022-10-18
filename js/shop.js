@@ -12,7 +12,7 @@ function show_home(){
 	if(gamedata['coins'] == undefined)
 	{
 		gamedata['coins'] = 0;
-		saveToLocalStorage();
+		//saveToLocalStorage();
 	}
 
 	//$('.all_counters').html('Coins: <span class="item_coins commas">' + numberWithCommas(gamedata['coins']) + '</span><br/><br/>');
@@ -70,6 +70,7 @@ function show_home2(){
 
 
 
+
 function check_single_counter(counter_id){
 	if(gamedata['counters'][counter_id] != undefined)
 	{
@@ -97,7 +98,7 @@ function check_counter_count(){
 				done_time: 		0
 			}
 		}
-		saveToLocalStorage();
+		//saveToLocalStorage();
 	}
 
 	return count_object(gamedata['counters']);
@@ -136,7 +137,7 @@ function buy_new_counter(){
 			item_amount: 	0,
 			done_time: 		0
 		}
-		saveToLocalStorage();
+		//saveToLocalStorage();
 		show_home();
 	}
 	
@@ -366,7 +367,7 @@ function start_selling(){
 			item_amount: 	to_the_tenth(1,selling_amount),
 			done_time: 		current_time(),
 		}
-		saveToLocalStorage();
+		//saveToLocalStorage();
 		show_content('home');
 	}
 }
@@ -555,7 +556,7 @@ function claim_counter(counter_id){
 			item_amount: 	0,
 			done_time: 		0
 		}
-		saveToLocalStorage();
+		//saveToLocalStorage();
 		show_home();*/
 		gamedata['counters'][counter_id]['done_time'] -= 1;
 		update_counter_timers();
@@ -571,9 +572,18 @@ function gain_coins(amount){
 	if(gamedata['coins'] == undefined)
 	{
 		gamedata['coins'] = 0;
-		saveToLocalStorage();
+		//saveToLocalStorage();
 	}
 
 	gamedata['coins'] += amount;
-	saveToLocalStorage();
+	//saveToLocalStorage();
 }
+
+
+
+
+
+
+
+
+

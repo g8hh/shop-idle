@@ -1,6 +1,8 @@
 var gamedata = {};
 var gamename = "newgame";
 
+var 备份 = "beifen";
+
 function loadLocalStorage(){
 	if (typeof(localStorage.newgame) !== "undefined") {
 	    console.log('Save game found');
@@ -10,7 +12,7 @@ function loadLocalStorage(){
 	    //console.log(gamedata);
 	} else {
 	    console.log('Sorry! No save game');  
-	    saveToLocalStorage();
+	    //saveToLocalStorage();
 	}
 	//console.log(gamedata);
 
@@ -21,9 +23,19 @@ function loadLocalStorage(){
 };
 
 function saveToLocalStorage(){
+	gamedata['版本']=2.4
 	localStorage.removeItem(gamename);
 	localStorage.setItem(gamename, JSON.stringify(gamedata));
 };
+
+
+function save备份(){
+	gamedata['版本']=2.4
+	localStorage.removeItem(备份);
+	localStorage.setItem(备份, JSON.stringify(gamedata));
+};
+
+
 
 function clearLocalStorage(){
 			if (!window.confirm("你确定? 游戏数据将清空!【游戏数据将清空!】")){

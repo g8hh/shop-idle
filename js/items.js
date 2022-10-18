@@ -3,11 +3,11 @@ function check_item(item_id){
 	{
 		if(gamedata['inventory'] == undefined){
 			gamedata['inventory'] = {};
-			saveToLocalStorage();
+			//saveToLocalStorage();
 		}
 		if(gamedata['inventory'][item_id] == undefined){
 			gamedata['inventory'][item_id] = 0;
-			saveToLocalStorage();
+			//saveToLocalStorage();
 		}
 	}
 }
@@ -48,7 +48,7 @@ function gain_item(item_id, amount, hide_visible_effects, check_a){
 	{
 		show_unlock_location();
 	}
-	saveToLocalStorage();
+	//saveToLocalStorage();
 }
 
 function check_have_enough(item_id){
