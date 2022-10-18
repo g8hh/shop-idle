@@ -68,7 +68,7 @@ function update_explore_progress_bar(){
 			};
 			gamedata['exploration']['current_progress'] = 0;
 			gamedata['exploration']['successful_explores'] ++;
-			saveToLocalStorage();
+			//saveToLocalStorage();
 			update_explore_progress_bar();
 			show_known_locations_list();
 		}
@@ -226,8 +226,10 @@ function show_unlock_location(){
 	
 	if(gamedata['inventory']['恶龙'] >= 92){var 恶龙=0.08}		 		
 	else if (gamedata['inventory']['恶龙'] < 92){var 恶龙=1-gamedata['inventory']['恶龙']*0.01};		
+	var 倍数=1	
+	if(gamedata['inventory']['物资'] >= 0){var 倍数=10000};		 		
 	
-	 var 减少=1*城墙*恶龙
+	var 减少=1*城墙*恶龙*倍数
 	if(to_the_tenth(1000*减少, count_object(gamedata['known_locations'])) > gamedata['coins_gained'] && count_object(gamedata['known_locations']) != 0)
 	{
 		show_content('locations');
@@ -242,8 +244,10 @@ function unlock_location(location_id, free_location){
 	
 	if(gamedata['inventory']['恶龙'] >= 92){var 恶龙=0.08}		 		
 	else if (gamedata['inventory']['恶龙'] < 92){var 恶龙=1-gamedata['inventory']['恶龙']*0.01};		
+	var 倍数=1	
+	if(gamedata['inventory']['物资'] >= 0){var 倍数=10000};		 		
 	
-	 var 减少=1*城墙*恶龙
+	var 减少=1*城墙*恶龙*倍数
 	if(free_location == undefined){free_location = false;}
 	var can_find = true;
 	if(gamedata['inventory'] == undefined){gamedata['inventory'] = {};}
@@ -282,7 +286,7 @@ function unlock_location(location_id, free_location){
 		gamedata['known_locations'][location_id]['actions'][first_action_id] = {level: 0};
 		gamedata['exploration']['current_progress'] = 0;
 		gamedata['exploration']['successful_explores'] ++;
-		saveToLocalStorage();
+		//saveToLocalStorage();
 		update_explore_progress_bar();
 		show_content('locations');
 	}
@@ -361,13 +365,17 @@ function find_new_location(){
 function show_known_locations_list(){
 	var 城墙=1
 	var 恶龙=1
+
 	if(gamedata['inventory']['城墙'] >= 900){var 城墙=0.1}		 		
 	else if (gamedata['inventory']['城墙'] < 900){var 城墙=1-gamedata['inventory']['城墙']*0.001};	
 	
 	if(gamedata['inventory']['恶龙'] >= 92){var 恶龙=0.08}		 		
-	else if (gamedata['inventory']['恶龙'] < 92){var 恶龙=1-gamedata['inventory']['恶龙']*0.01};		
+	else if (gamedata['inventory']['恶龙'] < 92){var 恶龙=1-gamedata['inventory']['恶龙']*0.01};	
 	
-	 var 减少=1*城墙*恶龙
+	var 倍数=1	
+	if(gamedata['inventory']['物资'] >= 0){var 倍数=10000};		 		
+	
+	var 减少=1*城墙*恶龙*倍数
 	
 	
 	if(gamedata['coins_gained'] == undefined){gamedata['coins_gained'] = 0;}
@@ -488,7 +496,7 @@ $(document).ready(function() {
 	    check_new_location();
 	    effective_skill_level('exploration');
 	    //$('.explore_section .skill_percent').html('(' + get_skill_percent('exploration') + '%)');
-	    saveToLocalStorage();
+	    //saveToLocalStorage();
 	});
 });
 

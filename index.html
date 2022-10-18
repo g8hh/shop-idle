@@ -2,7 +2,7 @@
 <!DOCTYPE html><html><head><meta charset="utf-8">
 	 
 	<meta name="viewport" content="width=device-width">
-	<title>商店放置</title>
+	<title>商店放置 - 天空之城作品</title>
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/general.js"></script>
@@ -66,13 +66,11 @@
 		    <button id="adiv3" class="hide"  onclick="test3(this)">化身恶龙</button>	
             <button id="adiv4" class="hide"  onclick="test4(this)">存档管理</button>
        
-  
 
           <div  id="div2" class="list">  
 		    <div class="home_devider">经验兑换-经验球数量： <span class="w1"></span><br></div>
-			<div class="page_section">基础升级经验改为1点每级翻1.1倍</div>
+			<div class="page_section">基础升级经验为1点每级翻1.2倍</div>
 			<div class="page_section">每个【经验球】可以兑换T1-10经验，T2-5经验，T3-2.5经验......</div>
-			<div class="page_section">要首先开技能兑换才有效果！不然材料丢失经验不加！</div>
 			<div class="page_section"><button1  onclick="兑换()" id="经验">T1世界经验</button1></div>
 			<div class="page_section"><button1  onclick="兑换_村庄()" id="村庄">T2村庄经验</button1></div>
             <div class="page_section"><button1  onclick="兑换_矿洞()" id="矿洞">T2矿洞经验</button1></div>
@@ -84,9 +82,6 @@
             <div class="page_section"><button1  onclick="兑换_地狱()" id="地狱">T4地狱经验</button1></div>
             <div class="page_section"><button1  onclick="兑换_战争()" id="战争">T4战争经验</button1></div>	
 			<div class="page_section"><button1  onclick="兑换_太空()" id="太空">T5太空经验</button1></div>
-            <div class="page_section"><button1  onclick="兑换_水星()" id="水星">T5水星经验</button1></div>
-            <div class="page_section"><button1  onclick="兑换_金星()" id="金星">T5金星经验</button1></div>	
-            <div class="page_section"><button1  onclick="兑换_火星()" id="火星">T5火星经验</button1></div>	
           </div>
 
           <div id="div3"class="list">
@@ -103,7 +98,6 @@
             <button id="恶龙之力3" class="hide2"  onclick="恶龙之力_3()">历练【提升恶龙能力】</button>	
             <div class="home_devider"id="恶龙之力4">历练 </div>
 			
-
           </div>
 		  
           <div id="div4"class="list">
@@ -111,14 +105,12 @@
 
             <button id="存档管理1" class="hide2"  onclick="存档管理()">导出【复制保存起来】</button>	
             <button id="存档管理2" class="hide2"  onclick="读档管理()">导入【小心确定！】</button>	
-             <div class="home_devider"id="恶龙之力4">下方存档点【把存档粘贴进去在导入！！！】 </div>
+            <button id="存档管理4" class="hide2"  onclick="提取管理()">提取保存TXT</button>				
+            <button id="存档管理5" class="hide2"  onclick="提取备份管理()">导入备份得存档【如果遇到丢失游戏马上用这个】</button>						
+             <div class="home_devider">下方存档点【把存档粘贴进去在导入！！！】 </div>
              <input type="text"id="存档管理3"  style="height:20px;width:500px;" value="" />
 
-          </div>
-
-
-
-		
+          </div>	
 		</div>		
 		
 
@@ -277,17 +269,29 @@
 				
 					当前声望奖励： <span class="current_prestige_bonus"></span><br>
 					获得声望后： <span class="next_prestige_bonus"></span><br><br>
-					声望等级最高只能10级= =太高了买低级物品容易卡死<br>
-					T6后面物品买卖速度主要靠物品稀有度<br>					
+					声望等级最高只能10级<br>
+					二周目后面物品买卖速度主要靠物品稀有度<br>					
 					声望等级基于有史以来拥有的最高位置数量。<br>
 					每一个声望等级都会使你的销售速度加倍。<br>
 					当你获得声望时，除了成就，AP和技能，游戏的每个部分都会重置。<br><br>
 					你每完成一个成就就获得一个AP。<br>
 					在第一次解锁后，你还可以获得每个位置的1个AP。<br>
+					重置后最高只能拥有200AP。额外AP二周目太空有事件可以获得<br>
+					二周目开始200AP后点两级【殖民地繁荣】必须的！<br>					
 					目前的成就点: <span class="current_achievement_points"></span><br>
 					获得声望后的AP： <span class="next_achievement_points"></span><br><br>
 					<button class="danger" onclick="prestige_now();">重置</button><br><br>
 				</div>
+				<div class="home_devider">拥有殖民舰队重置后可以在这里领取二周目物资！开启全新地点</div>
+				<div class="page_section">
+					第一次拥有殖民舰队重置后，每个重置都能领取一次.<br>
+					有殖民舰队重置后先到这里领了再去开图，一周目的图不需要开<br>						
+				</div>				
+                <button id="二周目物资" class="page_section"  onclick="二周目物资()">领取物资</button>					
+				
+				
+				
+				
 				<div class="home_devider">可选</div>
 				<div class="page_section">
 					降级模式将提供降级行动的选项。使用这个来平衡产品价格。<br>降级不会退款。<br>
@@ -299,21 +303,492 @@
 				<div class="home_devider"><br>重置游戏(没有确认)</div>
 				<div class="page_section">
 					这将完全重置你的游戏。<br>
-					<button class="danger" onclick="clearLocalStorage();location.reload();">重置</button><br><br>
+					<button class="danger" onclick="clearLocalStorage();location.reload();">清空</button><br><br>
 				</div>
 			</div>
 		</div>
 		<div id="content_unlock_location" class="page_container">
 			<div class="page_section">
+				<button class="menu_button slim" data-target-content="options">选项</button>				
 				<button class="menu_button slim danger" data-target-content="locations">取消</button>
 			</div>
 			<div class="unlockable_list"></div>
 		</div>
+		
+		
+			<div id="content_home3" class="page_container">
+		
+			<div class="page_section">
+				<button class="menu_button slim" data-target-content="locations">位置</button>
+				<button class="menu_button slim home_button" data-target-content="home">商店</button>				
+			</div>
+			
+			
+		  <div id="太空界面"  style="display:none" class="home_devider">
+		  <button id="太空项目0"  class="hide3" onclick="太空项目div(0)">太空</button>	
+		  <button id="太空项目1"  class="hide3" onclick="太空项目div(1)">舰队</button>	
+		  <button id="太空项目3"  class="hide3" onclick="太空项目div(3)">战绩</button>			  
+		  <button id="太空项目2"  class="hide3" onclick="太空项目div(2)">科技</button>	
+		  <button id="太空项目4"  class="hide3" onclick="太空项目div(4)">巨构</button>	
+		  <button id="太空项目5"  class="hide3" onclick="太空项目div(5)">星区</button>	
+		  <button id="太空项目6"  class="hide3" onclick="太空项目div(6)">星战</button>	
+		  
+		  </div>
+		  
+ 
+		  
+		  
+		    <div id="MailDiv0" style="display:none"> 
+			
+		    <div id="奖杯"style="display:none"> 	
+		    <div class="home_devider"> 星座宫殿 </div>	
+
+			<div class="page_section">拥有星座宫殿越多,每个奖杯产生的星星数量越多.</div>
+			<div class="page_section">每个文明丢失的宫殿越多,他们的守卫舰队会越强.</div>			
+			<div id="星座宫殿1" class="page_section"></div>
+		
+		   	<div class="page_section5">
+			<div class="explore_bar1">
+			<div id="奖杯1_1" class="巨构进度" ></div>	
+			<div id="奖杯1_2" class="巨构进度建造"></div>		
+            </div>十二星座宫殿奖杯会产生星星<span id="奖杯1_3"></div>	
+					
+		   	<div id="奖杯2"class="page_section5">
+			<div class="explore_bar1">
+			<div id="奖杯2_1" class="科技进度" ></div>	
+			<div id="奖杯2_2" class="科学进度建造"></div>		
+            </div>星宫守卫者产出<span id="奖杯2_3"></div>												
+	       </div>
+	        
+	
+	
+		    <div class="home_devider"> 太空 <span  id="太空资源显示"></div>
+			<div class="page_section1">戴森云能量： <span class="taikong1"></div>
+			<div class="page_section1">戴森云能量增长速度： <span class="taikong2"></div>
+			<div class="page_section3">殖民地繁荣度： <span class="taikong3"></div>
+			<div class="page_section3">殖民地繁荣度增长速度： <span class="taikong4"></div>	
+			<div class="page_section3">殖民地能量接收器： <span class="taikong5"></div>	
+			<div class="page_section">戴森云能量根据你的发射太阳帆增加</div>
+			<div class="page_section">殖民地繁荣上限<span class="taikong6"></div>
+			
+            <button id="殖民地2" class="hide2"  onclick="殖民地2()">收割殖民地资源</button>	
+		   	<div id="戴森壳"onclick="殖民地2()" style="display:none"class="page_section7">
+			<div class="explore_bar1">
+			<div id="戴森壳1_1" class="巨构进度" >收割殖民地资源</div>	
+			<div id="戴森壳1_2" class="巨构进度建造"></div>	
+            </div>每座戴森壳每秒转换100能源为光能,进度攒满收集一次顺带收割殖民地资源<span id="戴森壳1_3"></div>	
+		   
+		   	<div id="星环城"style="display:none"class="page_section7">
+			<div class="explore_bar1">
+			<div id="星环城1_1" class="巨构进度" ></div>	
+			<div id="星环城1_2" class="巨构进度建造"></div>	
+            </div>每座星环城每秒消耗1K能源产出货物<span id="星环城1_3"></div>	
+		   
+		   
+		   	   
+			<div id="殖民地6"onclick="殖民地1_1()"class="page_section">接收器消耗戴森云能量提升繁荣度,等级高消耗能量更多【点我开关接收器】<span id="殖民地1_1"></div>
+			<div   id="殖民地5" class="page_section">需要一定能量才工作<span  id="太空资源显示2"></div>
+           <button id="殖民地1" class="hide2"  onclick="殖民地1()">升级能量接收器</button>	
+           <button id="殖民地4" class="hide2"  onclick="殖民地4()">降级能量接收器【只退一半】</button>				
+			<div id="殖民地3_1" class="page_section"></div>							   
+           <button id="殖民地3" class="hide2"  onclick="殖民地3()">过载接收【能量转换光能】</button>	
+		   
+		   
+		   
+		   
+		   
+		   
+            <div class="home_devider"id="殖民地提示">太空</div>		
+			<div class="page_section">外星球殖民地繁荣增长是由当地的居住地和货运飞船的平衡数量增长</div>
+			<div class="page_section">比如：居住地8货运飞船5【获取速度为5】</div>
+			<div class="page_section">比如：居住地7货运飞船7【获取速度为7】</div>	
+			<div class="page_section">等级越高在你收获物资的时候附带的其他星球物资越多</div>	
+
+           <div id="星门殖民地" style="display:none"class="page_section">
+		   <div class="page_section">星门加速贸易流通增长殖民地繁荣-地球星门指向<span  id="星门殖民地1"></div>	
+           <button  class="hide3"  onclick="地球星门项目(1)">火星</button>			  
+           <button  class="hide3"  onclick="地球星门项目(2)">金星</button>	
+           <button  class="hide3"  onclick="地球星门项目(3)">水星</button>	</div>	
+
+			
+			<div id="外星球殖民1"style="display:none"class="page_section5">
+			<div class="explore_bar1">
+			<div id="外星球殖民1_1" class="explore_progress_bar " ></div>	
+			<div id="外星球殖民1_2" class="explore_time"></div>	
+            </div>火星殖民地等级：<span id="外星球殖民1_3"></div>	
+			<div id="外星球殖民2"style="display:none"class="page_section5">
+			<div class="explore_bar1">
+			<div id="外星球殖民2_1" class="explore_progress_bar " ></div>	
+			<div id="外星球殖民2_2" class="explore_time"></div>	
+            </div>金星殖民地等级：<span id="外星球殖民2_3"></div>				
+			<div id="外星球殖民3"style="display:none"class="page_section5">
+			<div class="explore_bar1">
+			<div id="外星球殖民3_1" class="explore_progress_bar " ></div>	
+			<div id="外星球殖民3_2" class="explore_time"></div>	
+            </div>水星殖民地等级：<span id="外星球殖民3_3"></div>	
+
+
+
+
+			
+		   
+
+		</div>
+         
+
+        <div  id="MailDiv1" style="display:none">  
+          <div class="home_devider"> 舰队<span id="舰队总评分"></span><br></div>	
+		  <div class="page_section">舰队所在位置： <span id="舰队战斗提示1"></div>	
+		  <div class="page_section">你每探索一次当前位置，就会获得酒馆消息。</div>	
+		  <div class="page_section">舰队速度越快结算时间消耗光能越少【舰队的速度<span id="舰队战斗提示4"></div>			  
+		  <div  class="page_section">最低10结算一次-下次战斗消息时间：<span id="舰队战斗提示3"></div>	
+		  <div id="舰队战斗提示2" class="page_section3">无</div>
+		  <div id="舰队战斗提示5" class="page_section3">酒馆消息</div>		  
+		  
+		  <div id="探索界面"   class="page_section">
+           <button  class="hide3"  onclick="舰队战斗(1)">返回地球</button>				
+           <button  class="hide3"  onclick="舰队战斗(2)">探索月球</button>			  
+           <button id="探索火星"    class="hide3"   style="display:none"onclick="舰队战斗(3)">探索火星</button>			  
+           <button id="探索金星"    class="hide3"   style="display:none"onclick="舰队战斗(4)">探索金星</button>
+           <button id="探索水星"    class="hide3"   style="display:none"onclick="舰队战斗(5)">探索水星</button>
+           <button id="探索银河系"    class="hide3"   style="display:none"onclick="舰队战斗(6)">探索银河系</button>		   
+		  </div>
+		  
+		  
+		  <div id="舰队项目1"style="display:none"onclick="远征货运(2)"class="page_section4">
+		  <div class="explore_bar1">
+		  <div id="舰队项目1_1" class="巨构进度" ></div>	
+		  <div id="舰队项目1_2" class="explore_time"></div>	
+          </div>远征补给不足得话战斗难度翻十倍.<span id="舰队项目1_3">【点我装载】</div>			
+		  
+          <div id="舰队11" style="display:none"class="home_devider">舰队</div>	
+          <div id="舰队12" style="display:none"class="page_section4"></div>		  
+          <div id="舰队1" style="display:none"class="page_section4"></div>
+          <div id="舰队6" style="display:none"class="page_section4"></div>		  
+          <div id="舰队2" style="display:none"class="page_section4"></div>
+          <div id="舰队7" style="display:none"class="page_section4"></div>			  
+          <div id="舰队3" style="display:none"class="page_section4"></div>
+          <div id="舰队8" style="display:none"class="page_section4"></div>			  
+          <div id="舰队4" style="display:none"class="page_section4"></div>
+          <div id="舰队9" style="display:none"class="page_section4"></div>			  
+          <div id="舰队5" style="display:none"class="page_section4"></div>		  
+          <div id="舰队10" style="display:none"class="page_section4"></div>	
+		  <div  class="home_devider">舰队</div>	
+		  
+		  
+		  
+        </div>
+        <div  id="MailDiv2" style="display:none"> 		
+          <div class="home_devider"> 科技<span id="科技项目提示100"></div>	 
+		   <div id="科技研究界面" style="display:none" >   
+		   <div class="page_section">实验室越多研究速度越快<span id="科技项目提示1"></div>
+		   <div class="page_section">需要戴森云能量<span id="科技项目提示2"></div>
+		   <div class="page_section">科技包剩于<span id="科技项目提示3"></div>		   
+		   
+			<div id="科技项目1"class="page_section6">
+			<div class="explore_bar1">
+			<div id="科技项目1_1" class="科技进度 " ></div>	
+			<div id="科技项目1_2" class="explore_time"></div>	
+            </div><span id="科技项目1_3"></div>	
+           <button id="科技按钮99"    class="hide2"   onclick="科技列表(100)">科技研发【只消耗能源】</button>				
+           <button id="科技按钮1"    class="hide2"   onclick="科技列表(0)">暂停</button>						   
+
+		   <div class="page_section">点击下方科技开始研究,研究速度<span id="科技速度提示"></div>					
+		  <div id="科技等级列表单1"class="科技等级列表单界面">	</div> 
+
+		</div>	 	
+        </div>
+		
+        <div  id="MailDiv3" style="display:none">  
+          <div class="home_devider"> 战绩</div>			  
+		  <div class="page_section">你的舰队被击败次数；<span id="战败"></div>	
+		  <div id="战绩界面1"class="战绩界面">	</div> 
+        </div>
+		
+        <div  id="MailDiv4" style="display:none">  
+          <div class="home_devider"> 巨构</div>
+		  
+		   <div id="巨构界面" style="display:none" >  
+		   
+		   <div class="page_section">派遣的时候舰队需要货物.二次派遣要先撤回</div>
+		   <div class="page_section">下次派遣消耗货物<span id="巨构战斗提示3"></div>		
+		   <div id="作战指令" style="display:none"class="page_section">下达作战指令消耗<span id="巨构战斗提示4"></div>			   
+	       <div class="page_section">巨构建造需要模块没有模块不加进度,建筑必须一次建造完.</div>	   
+		  
+			<div id="巨构项目1"class="page_section4">
+			<div class="explore_bar1">
+			<div id="巨构项目1_1" class="巨构进度 " ></div>	
+			<div id="巨构项目1_2" class="巨构进度建造"></div>	
+            </div>守卫舰队评分<span id="巨构项目1_3"></div>		
+
+		  <div  class="page_section">下次建造消息时间：<span id="巨构战斗提示1"></div>	
+		  <div id="巨构战斗提示2" class="page_section3">无</div>
+
+
+			
+		  
+           <button  class="hide3"  onclick="巨构舰队项目(1)">派遣</button>			  
+           <button  class="hide3"  onclick="巨构舰队项目(2)">撤回</button>	
+           <button  id="作战指令1" style="display:none" class="hide3"  onclick="巨构舰队项目(3)">作战指令</button>			   
+          <div class="home_devider">巨构-<span id="巨构提示项目1"></div>
+
+
+			<div id="星门项目1" class="page_section3"onclick="星门项目()"  > 星门建造需要消耗星门模块,隐藏或显示<span id="星门提示1"></div>	
+            <div id="星门项目2" style="display:none"      class="page_section3">
+		   <div class="page_section">地球星门可以提升繁荣度上限还可以指向加速外星殖民地</div>					
+			<div id="巨构项目2"style="display:none"onclick="巨构建筑项目(2)"class="page_section7">
+			<div class="explore_bar1">
+			<div id="巨构项目2_1" class="巨构进度" ></div>	
+			<div id="巨构项目2_2" class="巨构进度建造"></div>				
+            </div><span id="巨构项目2_3"></div>	
+
+
+			<div id="巨构项目3"style="display:none"onclick="巨构建筑项目(3)"class="page_section7">
+			<div class="explore_bar1">
+			<div id="巨构项目3_1" class="巨构进度" ></div>	
+			<div id="巨构项目3_2" class="巨构进度建造"></div>	
+            </div><span id="巨构项目3_3"></div>	
+			
+			<div id="巨构项目4"style="display:none"onclick="巨构建筑项目(4)"class="page_section7">
+			<div class="explore_bar1">
+			<div id="巨构项目4_1" class="巨构进度" ></div>	
+			<div id="巨构项目4_2" class="巨构进度建造"></div>	
+            </div><span id="巨构项目4_3"></div>	
+			
+			<div id="巨构项目5"style="display:none"onclick="巨构建筑项目(5)"class="page_section7">
+			<div class="explore_bar1">
+			<div id="巨构项目5_1" class="巨构进度" ></div>	
+			<div id="巨构项目5_2" class="巨构进度建造"></div>	
+            </div><span id="巨构项目5_3"></div>				
+			</div>	
+			
+			
+			<div id="戴森壳项目1" onclick="戴森壳项目()" style="display:none"class="page_section3"  >戴森壳造需要消耗戴森壳模块,隐藏或显示<span id="戴森壳提示1"></div>   <div id="戴森壳项目2" style="display:none"  class="page_section3">			
+			<div id="巨构项目6"style="display:none"onclick="巨构建筑项目(6)"class="page_section7">
+			<div class="explore_bar1">
+			<div id="巨构项目6_1" class="巨构进度" ></div>	
+			<div id="巨构项目6_2" class="巨构进度建造"></div>	
+            </div><span id="巨构项目6_3"></div>	</div>	
+
+			<div id="星环城项目1" onclick="星环城项目()" style="display:none"class="page_section3"  >星环城造需要消耗星环城模块,隐藏或显示<span id="星环城提示1"></div>   <div id="星环城项目2" style="display:none"  class="page_section3">			
+			<div id="巨构项目7"style="display:none"onclick="巨构建筑项目(7)"class="page_section7">
+			<div class="explore_bar1">
+			<div id="巨构项目7_1" class="巨构进度" ></div>	
+			<div id="巨构项目7_2" class="巨构进度建造"></div>	
+            </div><span id="巨构项目7_3"></div>	</div>	
+			
+			<div id="工厂项目1" onclick="工厂项目()" style="display:none"class="page_section3"  >工厂造需要消耗工厂模块,隐藏或显示<span id="工厂提示1"></div>   <div id="工厂项目2" style="display:none"  class="page_section3">			
+			<div id="巨构项目8"style="display:none"onclick="巨构建筑项目(8)"class="page_section7">
+			<div class="explore_bar1">
+			<div id="巨构项目8_1" class="巨构进度" ></div>	
+			<div id="巨构项目8_2" class="巨构进度建造"></div>	
+            </div><span id="巨构项目8_3"></div>
+			<div id="巨构项目9"style="display:none"onclick="巨构建筑项目(9)"class="page_section7">
+			<div class="explore_bar1">
+			<div id="巨构项目9_1" class="巨构进度" ></div>	
+			<div id="巨构项目9_2" class="巨构进度建造"></div>	
+            </div><span id="巨构项目9_3"></div>			
+			<div id="巨构项目10"style="display:none"onclick="巨构建筑项目(10)"class="page_section7">
+			<div class="explore_bar1">
+			<div id="巨构项目10_1" class="巨构进度" ></div>	
+			<div id="巨构项目10_2" class="巨构进度建造"></div>	
+            </div><span id="巨构项目10_3"></div>					
+			<div id="巨构项目11"style="display:none"onclick="巨构建筑项目(11)"class="page_section7">
+			<div class="explore_bar1">
+			<div id="巨构项目11_1" class="巨构进度" ></div>	
+			<div id="巨构项目11_2" class="巨构进度建造"></div>	
+            </div><span id="巨构项目11_3"></div>			
+			
+			
+			</div>				
+			
+			
+
+
+
+		</div> 
+        </div>
+
+		<div id="MailDiv5" style="display:none"> 
+
+ 		   <div class="home_devider"> 星系首都 </div>	
+
+		  <div id="星系首都界面" style="display:none" >					
+
+		  <div id="星系首都资金1"style="display:none"class="page_section5">
+		  <div class="explore_bar1">
+		  <div id="星系首都资金3_2" class="巨构进度" ></div>	
+		  <div id="星系首都资金3_3" class="巨构进度建造"></div>		  
+		  </div>每个星区产生繁荣的时候可以获取店铺价值,到达1T凝聚一枚你的帝国硬币</div>	
+			<div id="执行宫殿1" style="display:none" class="page_section3">首都资源:满出上限后不在增加	  
+			<div id="执行宫殿"  class="page_section3"></div>
+			<div id="武器仓库"  style="display:none" class="page_section3"></div>
+			<div id="机械装置"  style="display:none" class="page_section3"></div>			
+			
+			</div>	
+
+			
+			<div class="page_section">星系殖民需要消耗星图和大型殖民舰队你有<span id="大型殖民舰队1"></div>
+			<div class="page_section">星际殖民次数越多消耗多,下次殖民需求<span id="大型殖民舰队2"></div>
+            <button id="星系首都" class="hide2"  onclick="星系首都()">星际殖民</button>		  
+
+
+	  
+		  <div class="page_section3"onclick="星系首都仓库()"  >物资种类多才能保证星区得需求.【开关仓库】</div>	
+		  <div id="星系首都仓库1"  class="page_section4">
+		  <div id="星系首都仓库2" class="page_section">【星系首都货运舰队仓】可以消耗对于物资补充满.</div>	 		  
+		  <div id="首都资源项目1"style="display:none"onclick="首都资源项目(1)"class="page_section3">
+		  <div class="explore_bar1">
+		  <div id="首都资源项目1_2" class="巨构进度" ></div>	
+		  <div id="首都资源项目1_3" class="巨构进度建造"></div>		  
+		  </div></div>					
+		  <div id="首都资源项目2"style="display:none"onclick="首都资源项目(2)"class="page_section3">
+		  <div class="explore_bar1">
+		  <div id="首都资源项目2_2" class="巨构进度" ></div>	
+		  <div id="首都资源项目2_3" class="巨构进度建造"></div>		  
+		  </div></div>				
+		  <div id="首都资源项目3"style="display:none"onclick="首都资源项目(3)"class="page_section3">
+		  <div class="explore_bar1">
+		  <div id="首都资源项目3_2" class="巨构进度" ></div>	
+		  <div id="首都资源项目3_3" class="巨构进度建造"></div>		  
+		  </div></div>	
+		  <div id="首都资源项目4"style="display:none"onclick="首都资源项目(4)"class="page_section3">
+		  <div class="explore_bar1">
+		  <div id="首都资源项目4_2" class="巨构进度" ></div>	
+		  <div id="首都资源项目4_3" class="巨构进度建造"></div>		  
+		  </div></div></div>				  
+	 	   <div class="home_devider"> 星区分部 </div>			
+		   <div class="page_section">星区基础繁荣根据【星区等级】和【星区评分】增长,</div>
+		   <div class="page_section">星区评分根据【星区等级】提升,评分不能超过【主舰队评分】.</div>		   	   
+		   <div class="page_section">开启支援货资后,星区会随机要求资源提升繁荣.【被需求物资需要大于0才有提升】</div>			   
+            <div id="星区界面1"class="星区界面"></div> 	
+
+
+
+
+        </div>	
+     	</div>	
+
+
+    <div id="MailDiv6" style="display:none"> 
+
+
+    <div class="home_devider"> 星系战争 </div>	
+	
+    <div style="display:none" id="星系战争">
+    <div id="群星2">
+	<div id="群星2">
+	
+		  	
+	<div id="星区1">星球核心可以提高基础繁荣增长倍率<span id="星区管理2倍率"></div>
+	<div id="星区1">星区等级<span id="星区之力0"></div>	 
+	<div id="星区2">升级消耗<span id="升级消耗0"></div>	 	
+	 <button id="剧毒等级" class="星区管理2"  onclick="星区管理项目(22)">剧毒核心</br><span id="星区管理3材料12"></button>		 
+	 <button id="熔岩等级" class="星区管理2"  onclick="星区管理项目(23)">熔岩核心</br><span id="星区管理3材料13"></button>		 
+	 <button id="寒冰等级" class="星区管理2"  onclick="星区管理项目(24)">寒冰核心</br><span id="星区管理3材料14"></button> </div>	 
+
+
+	<div id="群星2">	
+	<div id="星区1">行星之力增加星区评分增长<span id="星区管理3倍率"></div>	
+	<div id="星区1">星区等级<span id="星区之力1"></div>	 
+	<div id="星区2">升级消耗<span id="升级消耗1"></div>	 
+	<div id="星区1">星区等级<span id="星区之力2"></div>	 
+	<div id="星区2">升级消耗<span id="升级消耗2"></div>	
+	<div id="星区1">星区等级<span id="星区之力3"></div>	 
+	<div id="星区2">升级消耗<span id="升级消耗3"></div>	
+	
+	 <button id="星核等级1" class="星区管理3"  onclick="星区管理项目(11)">星核之力</br><span id="星区管理3材料1"></button>
+	 <button id="星核等级1" class="星区管理3"  onclick="星区管理项目(12)">星尘之力</br><span id="星区管理3材料2"></button>
+	 <button id="星核等级1" class="星区管理3"  onclick="星区管理项目(13)">盖亚之力</br><span id="星区管理3材料3"></button>	 
+	 <button id="星核等级2" class="星区管理3"  onclick="星区管理项目(14)">黄矮星之力</br><span id="星区管理3材料4"></button>		 
+	 <button id="星核等级3" class="星区管理3"  onclick="星区管理项目(15)">红巨星之力</br><span id="星区管理3材料5"></button>	 
+	 <button id="星核等级4" class="星区管理3"  onclick="星区管理项目(16)">白矮星之力</br><span id="星区管理3材料6"></button>
+	 <button id="星核等级5" class="星区管理3"  onclick="星区管理项目(17)">紫巨星之力</br><span id="星区管理3材料7"></button>		 
+	 <button id="星核等级6" class="星区管理3"  onclick="星区管理项目(18)">蓝巨星之力</br><span id="星区管理3材料8"></button>	 	 
+	 <button id="星核等级7" class="星区管理3"  onclick="星区管理项目(19)">脉冲星之力</br><span id="星区管理3材料9"></button>
+	 <button id="星核等级8" class="星区管理3"  onclick="星区管理项目(20)">中子星之力</br><span id="星区管理3材料10"></button>		 
+	 <button id="星核等级9" class="星区管理3"  onclick="星区管理项目(21)">黑洞之力</br><span id="星区管理3材料11"></button>	 	 
+	 
+	 
+	 </div> 
+
+ 
+	 <div id="星区管理按钮">
+	 <button  class="hide3"  onclick="星区管理项目(1)">头部星区</button>	
+	 <button  class="hide3"  onclick="星区管理项目(2)">上个星区</button>		 
+	 <button  id="星区管理界面消息"  class="星区管理2" ></button>		 
+	 <button  class="hide3"  onclick="星区管理项目(3)">下个星区</button>		 
+	 <button  class="hide3"  onclick="星区管理项目(4)">尾部星区</button></div> 
+
+    <div id="星区管理"class="星区管理界面"></div> 
+	<div id="星区1">集结星区舰队需要消耗执行力，剩余<span id="星区征招"></div>
+	<div id="星区1">星区评分降低后繁荣增长会稍微减少，星区评分低于5M后将不会响应你的征招.</br>	<span id="星区征招1"></div>	
+
+	 <div id="星区管理按钮">
+	 <button  class="星区管理2"  onclick="星区征招项目(1)">征招1M</button>	
+	 <button  class="星区管理2"  onclick="星区征招项目(2)">征招10M</button>		 	 
+	 <button  class="星区管理2"  onclick="星区征招项目(3)">征招100M</button>	
+	 <button  class="星区管理2"  onclick="星区征招项目(4)">征招10%</button>		 
+	 <button  class="星区管理2"  onclick="星区征招项目(5)">征招50%</button></div> 	
+	
+    <div id="星系舰队1"class="page_section4">
+    <div class="explore_bar1">
+	<div id="星系舰队1_2" class="巨构进度" ></div>	
+	<div id="星系舰队1_3" class="巨构进度建造"></div>		  
+	</div>集结中的星战舰队评分</div>	
+	
+    <div style="display:none" id="星系舰队2" onclick="群星观测站(1)"class="page_section6">
+    <div class="explore_bar1">
+	<div id="星系舰队2_2" class="科技进度" ></div>	【开始充能观测】
+	  
+	</div>群星观测站<span id="星战资源2"></div>	
+    <br><br><br><br><br><br><br>
+	
+
+		<div id="星区1">星系战争很残酷,每次战争会有舰船直接摧毁不能修复.</div>
+		<div id="星区1">每次战争需要开启跳跃引擎<span id="星战资源1"></div>		
+		
+
+	    <div id="战争消息" class="page_section3">无</div>		
+		<div id="星区2" onclick="跳跃装置(99)" class="群星3">
+		<span id="外星球10"></span><br>
+	    <div id="跳跃引擎"  class="巨构进度"style="width:100%" ></div>【跳跃引擎】【取消充能】<br>
+   </div>			
+		
+		</div>		
+         <div id="外星球4"class="外星球界面4"> </div> 
+         <div id="外星球3"class="外星球界面3"> </div> 
+         <div id="外星球2"class="外星球界面2"> </div> 	
+         <div id="外星球1"class="外星球界面1"> </div> 
+	</div>	
+	</div>	
+    </div>	
+
+
+	
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<div id="content_locations" class="page_container">
 			<div class="page_section">
-			
+				<button  class="menu_button slim "onclick="太空按钮()" data-target-content="home3">太空</button>	
 				<button class="menu_button slim home_button" data-target-content="home">商店</button>
 			</div>
+			
+			
+			
 			
 			<div class="explore_section">
 				位置<br>
@@ -347,7 +822,7 @@
 			
 				<button class="menu_button slim home_button" data-target-content="home">商店</button>
 				<button class="menu_button slim locations_button" data-target-content="locations">位置</button>
-					<button class="menu_button slim "onclick="功能()" data-target-content="home2">功能</button>
+				<button class="menu_button slim "onclick="功能()" data-target-content="home2">功能</button>
 			</div>
 			<div class="page_section">
 				<span class="current_location_title"></span>
@@ -389,10 +864,10 @@
 
 
 	function 读档管理(){ 
-	 
 	if (!window.confirm("你确定? 这将覆盖的存档？【存档错误可能会卡死！】")){
 			return;
 		}
+    if (gamedata['版本']<=2.4){		
       var input = document.getElementById("存档管理3").value;
 	  
 	  if(input){  
@@ -402,10 +877,13 @@
 	    window.localStorage.setItem("newgame", ""+inputtxt+"");
 		 window.location.href = window.location.href;		
 	}
+	}else{!window.confirm("存档版本太新了")}
+	
+	
 	};
 	
     function 存档管理(){
-	
+	     //saveToLocalStorage();
 	    var text = window.localStorage["newgame"];	
         var input = document.getElementById("存档管理3");
 		
@@ -416,6 +894,55 @@
           document.execCommand("copy"); 
           alert("复制成功，建议吧存档保存到安全的地方！");  
 	};
+	
+	 function 提取管理() {
+
+		      var text = window.localStorage["newgame"];
+			  var txt = btoa(unescape(encodeURIComponent(text.toString())));	
+              var texte =new Date()			  
+　　　　　　　　　exportRaw(''+texte+'.txt',''+txt+'')
+
+                function fakeClick(obj) {
+                  var ev = document.createEvent("MouseEvents");
+                  ev.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                  obj.dispatchEvent(ev);
+                }
+
+                function exportRaw(name, data) {
+                  var urlObject = window.URL || window.webkitURL || window;
+                  var export_blob = new Blob([data]);
+                  var save_link = document.createElementNS("http://www.w3.org/1999/xhtml", "a")
+                  save_link.href = urlObject.createObjectURL(export_blob);
+                  save_link.download = name;
+                  fakeClick(save_link);
+                } 
+	};	
+	
+	
+
+	 function 提取备份管理() {
+	 
+	if (!window.confirm("你确定? 这将覆盖的存档？【提取备份得存档】")){
+			return;
+		}
+						
+     if (gamedata['版本']<=2.4){			
+		
+      var input = window.localStorage["beifen"];
+	  	  
+	    window.localStorage.setItem("newgame", ""+input+"");
+		 window.location.href = window.location.href;		
+	
+	
+	}else{!window.confirm("存档版本太新了")}
+	};	
+
+
+
+
+
+
+
 
 
 function 功能(){
@@ -428,11 +955,24 @@ function 功能(){
     else  {
         Btn3.style.display = "none";
     }
-document.getElementById("adiv3").innerHTML = "隐藏化身恶龙";
+
 	
 	};
 
 	
+
+    function 太空按钮(){
+    var Btn = document.getElementById("太空界面");
+    if (gamedata['inventory']['金属物资包']!==undefined) {
+        Btn.style.display = "block"; 	 
+    }
+    else  {
+        Btn.style.display = "none";
+    }	
+	};
+
+
+
 
 
 function test(obj){
@@ -485,12 +1025,14 @@ function test4(obj){
 		};
 		gamedata['bonus_achievement_points'] += new_ap_bonus;
 		gamedata['achievement_points'] = get_achievement_points();
-		if(gamedata['prestige'] >= 10){new_prestige_bonus = 10;}
-		else if(gamedata['prestige'] > new_prestige_bonus){new_prestige_bonus = gamedata['prestige'] + 0;}		
+		if(gamedata['prestige'] >= 10){new_prestige_bonus = 10}
+		else if(gamedata['prestige'] > new_prestige_bonus){new_prestige_bonus = gamedata['prestige'] + 0;}			
 		console.log(new_prestige_bonus);
-		//clearLocalStorage();
-		//loadLocalStorage();
+        if(gamedata['inventory']['殖民舰队'] >= 1){gamedata['二周目'] = true;}		
+
 		delete gamedata['inventory'];
+		delete gamedata['战绩'];
+		delete gamedata['下个位置倍数']
 		gamedata['ap_bonusses'] = {};
 		gamedata['known_locations'] = {};
 		delete gamedata['counters'];
@@ -500,7 +1042,7 @@ function test4(obj){
 		gamedata['prestige'] = new_prestige_bonus;
 		saveToLocalStorage();
 		show_content('home');         
-       window.location.href = window.location.href;		
+       window.location.href = window.location.href;		   
 	};
 
 
@@ -580,27 +1122,7 @@ function test4(obj){
 		  this.gamedata['inventory']['经验球'] =0
 		  
 	};	
-	function 兑换_水星(){
-	      var 经验 =this.gamedata['inventory']['经验球']*0.625	
-		  document.getElementById("水星").innerHTML = "T5水星+"+经验+"经验！";
-          this.gamedata['skills']['水星']['skill_xp']  +=经验
-		  this.gamedata['inventory']['经验球'] =0
-		  
-	};		
-	function 兑换_金星(){
-	      var 经验 =this.gamedata['inventory']['经验球']*0.625	
-		  document.getElementById("金星").innerHTML = "T5金星+"+经验+"经验！";
-          this.gamedata['skills']['金星']['skill_xp']  +=经验
-		  this.gamedata['inventory']['经验球'] =0
-		  
-	};		
-	function 兑换_火星(){
-	      var 经验 =this.gamedata['inventory']['经验球']*0.625	
-		  document.getElementById("火星").innerHTML = "T5火星+"+经验+"经验！";
-          this.gamedata['skills']['火星']['skill_xp']  +=经验
-		  this.gamedata['inventory']['经验球'] =0
-		  
-	};		
+
 	
 	
 	
@@ -614,7 +1136,8 @@ function test4(obj){
 	      var 倍率 = Math.random()*(2+最高)+(1+最低)
 	       
 	      var 恶龙 =  Math.floor(this.gamedata['恶龙之力']*倍率)
-          this.gamedata['coins']+=恶龙		  
+          this.gamedata['coins']+=恶龙
+          if(gamedata['inventory']['物资']>=0){var 恶龙=0}		  
           document.getElementById("恶龙之力1").innerHTML = "你掠夺了+"+恶龙+"硬币！";		  
 		  this.gamedata['恶龙之力'] =0
 		  
@@ -765,7 +1288,7 @@ function test4(obj){
 		update_counter_timers();
 		check_ticks(time_passed);
 		
-		var tick_time = 100;
+		var tick_time = 1000;
 		var next_tick_delay = (tick_time * 2) - time_passed;
 		if(next_tick_delay < (tick_time / 2))
 		{
@@ -778,7 +1301,14 @@ function test4(obj){
 		global_timer = setTimeout(function(){
 			check_global_timer();
 		},next_tick_delay);
-	
+		化身恶龙();
+		if(gamedata['二周目'] !=undefined){二周目项目();}
+		
+      
+    };
+
+    function 化身恶龙(){
+
 	if(gamedata['恶龙之力'] == undefined){gamedata['恶龙之力'] = 0;}
 	if(gamedata['恶龙之魂'] == undefined){gamedata['恶龙之魂'] = 0;}
 	if(gamedata['龙の爪'] == undefined){gamedata['龙の爪'] = 0;}
@@ -791,10 +1321,10 @@ function test4(obj){
 	
 
 	  if (gamedata['inventory']['恶龙']>99&&gamedata['恶龙之力'] <= 10000000) {
-         this.gamedata['恶龙之力']+=(恶龙力*0.1)*(1+gamedata['龙の角']*0.01)
+         this.gamedata['恶龙之力']+=(恶龙力*0.1)*(1+gamedata['龙の角']*0.01)*10
     }
 	  if (gamedata['恶龙之魂']>1&&gamedata['恶龙之力'] <= 10000000) {
-        this.gamedata['恶龙之力']+=(gamedata['恶龙之魂']*0.001)*(1+gamedata['龙の角']*0.01)
+        this.gamedata['恶龙之力']+=(gamedata['恶龙之魂']*0.001)*(1+gamedata['龙の角']*0.01)*10
     }
 
 	   $('.w1').html(gamedata['inventory']['经验球']);
@@ -806,7 +1336,40 @@ function test4(obj){
 	   $('.w5').html(gamedata['龙の爪']+"级");
        $('.w6').html(gamedata['龙の鳞']+"级");
 	   $('.w7').html(gamedata['龙の角']+"级");
+	   
 	};
+
+
+    var int=self.setInterval("zidongbaocun()",2000);
+
+    function zidongbaocun()
+    {
+	saveToLocalStorage();		
+    };
+
+
+
+   var int=self.setInterval("beifen()",600000);
+
+    function beifen()
+    {
+	save备份();		
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	function requestFullScreen(element) {
 	    // Supports most browsers and their versions.
@@ -832,12 +1395,22 @@ function test4(obj){
 	requestFullScreen(elem);
 
 </script>
+
 <!--客服 开始-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/g8hh/g8hh.github.io/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
-<script src="https://cdn.jsdelivr.net/gh/g8hh/g8hh.github.io/static/js/kf.js"></script>
+<script src="//g8hh.github.io/static/js/jquery.min.js"></script>
+<link rel="stylesheet" href="//g8hh.github.io/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//g8hh.github.io/static/js/kf.js"></script>
 <!-- 客服 结束 -->
 <!--站长统计-->
-    <div style="display: none">
-       <script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1280006740&web_id=1280006740"></script>
+   <div style="display: none"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f237591d5976f87ca2e06b38c3658d9c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
     </div>
 </body></html>

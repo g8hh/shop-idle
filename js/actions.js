@@ -576,7 +576,7 @@ function toggle_production(){
 	{
 		gamedata['known_locations'][current_location]['actions'][current_action_id]['enabled'] = true;
 	}
-	saveToLocalStorage();
+	//saveToLocalStorage();
 	update_action_upgrade_buttons();
 }
 function upgrade_location(location_id){
@@ -607,7 +607,7 @@ function upgrade_location(location_id){
 			}
 		});
 		gamedata['known_locations'][location_id]['level']++;
-		saveToLocalStorage();
+		//saveToLocalStorage();
 		show_current_location();
 	}
 }
@@ -648,7 +648,7 @@ function unlock_action(action_id){
 			gain_item(item_id, real_amount * -1);	
 		});
 		gamedata['known_locations'][location_id]['actions'][action_id] = {level: 1};
-		saveToLocalStorage();
+		//saveToLocalStorage();
 		show_content('current_location');
 	}
 }
@@ -694,7 +694,7 @@ function upgrade_action(){
 
 			gain_item(action_upgade_id, action_upgrade_cost * -1)
 			gamedata['known_locations'][current_location]['actions'][current_action_id]['level'] += buy_upgrade_multiplier;
-			saveToLocalStorage();
+			//saveToLocalStorage();
 			update_action_upgrade_cost();
 			update_action_upgrade_buttons();
 			//show_current_action();
@@ -710,7 +710,7 @@ function degrade_action(){
 	if(gamedata['known_locations'][current_location]['actions'][current_action_id]['level'] > 0)
 	{
 		gamedata['known_locations'][current_location]['actions'][current_action_id]['level']--;
-		saveToLocalStorage();
+		//saveToLocalStorage();
 		show_current_action();
 	}
 }
@@ -721,7 +721,7 @@ function check_ticks(){
 	{
 		gamedata['last_production_tick'] = new Date().getTime();
 	}
-	var time_since_last_tick = new Date() - gamedata['last_production_tick'];
+	var time_since_last_tick = 1001;
 	if(time_since_last_tick > 1000)
 	{
 		var seconds_passed = Math.floor(time_since_last_tick / 1000);

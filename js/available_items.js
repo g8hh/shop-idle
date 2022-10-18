@@ -726,10 +726,1191 @@ var available_items = {
 		image: 		'cailiao/122.png',
 		rarity: 	7,
 	},		
+	大型殖民舰队:{
+		name: 		'大型殖民舰队',
+		value: 		25000000000,
+		image: 		'cailiao/122.png',
+		rarity: 	8,
+	},		
+	帝国硬币:{
+		name: 		'帝国硬币',
+		value: 		100000000000,
+		image: 		'cailiao/212.png',
+		rarity: 	8,
+	},		
+	
+	戴森云:{
+		name: 		'戴森云',
+		value: 		100000,
+		image: 		'cailiao/123.png',
+		rarity: 	1,
+	},			
+	物资:{
+		name: 		'物资',
+		value: 		100000,
+		image: 		'cailiao/124.png',
+		rarity: 	1,
+	},			
+	金属物资包:{
+		name: 		'金属物资包',
+		value: 		11000000,
+		image: 		'cailiao/151.png',
+		rarity: 	2,
+	},	
+	三星金属包:{
+		name: 		'三星金属包',
+		value: 		11000000,
+		image: 		'cailiao/172.png',
+		rarity: 	3,
+	},		
+	能量接收器:{
+		name: 		'能量接收器',
+		value: 		600000,
+		image: 		'cailiao/125.png',
+		rarity: 	3,
+	},		
+	太阳帆:{
+		name: 		'太阳帆',
+		value: 		600000,
+		image: 		'cailiao/126.png',
+		rarity: 	3,
+	},		
+	山铜:{
+		name: 		'山铜',
+		value: 		1000000,
+		image: 		'cailiao/127.png',
+		rarity: 	3,
+	},		
+	陨铁:{
+		name: 		'陨铁',
+		value: 		1000000,
+		image: 		'cailiao/128.png',
+		rarity: 	3,
+	},		
+	钛铁:{
+		name: 		'钛铁',
+		value: 		1000000,
+		image: 		'cailiao/129.png',
+		rarity: 	3,
+	},	
+	合金板:{
+		name: 		'合金板',
+		value: 		100000,
+		image: 		'cailiao/130.png',
+		rarity: 	3,
+	},		
+	驾驶员:{
+		name: 		'驾驶员',
+		value: 		50000,
+		image: 		'cailiao/131.png',
+		rarity: 	3,
+	},		
+	少将:{
+		name: 		'少将',
+		value: 		3000000,
+		image: 		'cailiao/132.png',
+		rarity: 	5,
+	},	
+	中将:{
+		name: 		'中将',
+		value: 		50000000,
+		image: 		'cailiao/133.png',
+		rarity: 	6,
+	},	
+	大将:{
+		name: 		'大将',
+		value: 		1000000000,
+		image: 		'cailiao/134.png',
+		rarity: 	7,
+	},		
+	元帅:{
+		name: 		'元帅',
+		value: 		3000000,
+		image: 		'cailiao/135.png',
+		rarity: 	5,
+	},		
+	超合金:{
+		name: 		'超合金',
+		value: 		500000,
+		image: 		'cailiao/146.png',
+		rarity: 	5,
+	},		
+	红色激光:{
+		name: 		'红色激光',
+		value: 		2000000,
+		image: 		'cailiao/147.png',
+		rarity: 	4,
+	},		
+	蓝色激光:{
+		name: 		'蓝色激光',
+		value: 		10000000,
+		image: 		'cailiao/148.png',
+		rarity: 	5,
+	},		
+	小型导弹:{
+		name: 		'小型导弹',
+		value: 		2000000,
+		image: 		'cailiao/149.png',
+		rarity: 	4,
+	},		
+	中型导弹:{
+		name: 		'中型导弹',
+		value: 		10000000,
+		image: 		'cailiao/150.png',
+		rarity: 	5,
+	},		
+	月球消息1:{
+		name: 		'月球消息1',
+		value: 		1000,
+		image: 		'cailiao/152.png',
+		rarity: 	1,
+	},			
+	月球消息2:{
+		name: 		'月球消息2',
+		value: 		1000,
+		image: 		'cailiao/152.png',
+		rarity: 	2,
+	},	
+	月球消息3:{
+		name: 		'月球消息3',
+		value: 		1000,
+		image: 		'cailiao/152.png',
+		rarity: 	3,
+	},	
+	古老的传说:{
+		name: 		'古老的传说',
+		value: 		10000000,
+		image: 		'cailiao/179.png',
+		rarity: 	5,
+	},		
+	致密的生物细胞:{
+		name: 		'致密的生物细胞',
+		value: 		1000000,
+		image: 		'cailiao/119.png',
+		rarity: 	5,
+	},	
+	黑龙战舰:{
+		name: 		'黑龙战舰',
+		value: 		150000000,
+		image: 		'cailiao/117.png',
+		rarity: 	7,
+	},	
+	火星领土:{
+		name: 		'火星领土',
+		value: 		10000,
+		image: 		'locations/t7n3.png',
+		rarity: 	1,
+	},	
+	金星领土:{
+		name: 		'金星领土',
+		value: 		10000,
+		image: 		'locations/t7n4.png',
+		rarity: 	1,
+	},	
+	水星领土:{
+		name: 		'水星领土',
+		value: 		10000,
+		image: 		'locations/t7n5.png',
+		rarity: 	1,
+	},	
+	火星货运:{
+		name: 		'火星货运',
+		value: 		6500000,
+		image: 		'cailiao/154.png',
+		rarity: 	5,
+	},	
+	水星货运:{
+		name: 		'水星货运',
+		value: 		6500000,
+		image: 		'cailiao/154.png',
+		rarity: 	5,
+	},
+	金星货运:{
+		name: 		'金星货运',
+		value: 		6500000,
+		image: 		'cailiao/154.png',
+		rarity: 	5,
+	},	
+		
+	
+	火星居住地:{
+		name: 		'火星居住地',
+		value: 		6500000,
+		image: 		'cailiao/155.png',
+		rarity: 	5,
+	},	
+	水星居住地:{
+		name: 		'水星居住地',
+		value: 		6500000,
+		image: 		'cailiao/155.png',
+		rarity: 	5,
+	},		
+	金星居住地:{
+		name: 		'金星居住地',
+		value: 		6500000,
+		image: 		'cailiao/155.png',
+		rarity: 	5,
+	},			
+	集装箱:{
+		name: 		'集装箱',
+		value: 		100000,
+		image: 		'cailiao/156.png',
+		rarity: 	3,
+	},	
+	武器:{
+		name: 		'武器',
+		value: 		10000,
+		image: 		'cailiao/157.png',
+		rarity: 	3,
+	},		
+	太空服:{
+		name: 		'太空服',
+		value: 		15000,
+		image: 		'cailiao/112.png',
+		rarity: 	3,
+	},		
+			
+	火星员工:{
+		name: 		'火星员工',
+		value: 		20000,
+		image: 		'cailiao/158.png',
+		rarity: 	3,
+	},	
+	金星员工:{
+		name: 		'金星员工',
+		value: 		20000,
+		image: 		'cailiao/159.png',
+		rarity: 	3,
+	},	
+	水星员工:{
+		name: 		'水星员工',
+		value: 		20000,
+		image: 		'cailiao/160.png',
+		rarity: 	3,
+	},		
+	火星物资:{
+		name: 		'火星物资',
+		value: 		10001,
+		image: 		'cailiao/161.png',
+		rarity: 	1,
+	},	
+	金星物资:{
+		name: 		'金星物资',
+		value: 		10001,
+		image: 		'cailiao/163.png',
+		rarity: 	1,
+	},	
+	水星物资:{
+		name: 		'水星物资',
+		value: 		10001,
+		image: 		'cailiao/162.png',
+		rarity: 	1,
+	},		
+	火星号:{
+		name: 		'火星号',
+		value: 		15500000,
+		image: 		'cailiao/113.png',
+		rarity: 	4,
+	},	
+	金星号:{
+		name: 		'金星号',
+		value: 		10000000,
+		image: 		'cailiao/113.png',
+		rarity: 	4,
+	},	
+	水星号:{
+		name: 		'水星号',
+		value: 		22000000,
+		image: 		'cailiao/113.png',
+		rarity: 	4,
+	},		
+	货物:{
+		name: 		'货物',
+		value: 		88800000,
+		image: 		'cailiao/171.png',
+		rarity: 	8,
+	},		
+	殖民地科技包:{
+		name: 		'殖民地科技包',
+		value: 		100003,
+		image: 		'cailiao/164.png',
+		rarity: 	5,
+	},			
+	阳光号:{
+		name: 		'阳光号',
+		value: 		100000000,
+		image: 		'cailiao/136.png',
+		rarity: 	5,
+	},		
+	火星领主核心:{
+		name: 		'火星领主核心',
+		value: 		500000000,
+		image: 		'cailiao/173.png',
+		rarity: 	7,
+	},		
+	水星领主核心:{
+		name: 		'水星领主核心',
+		value: 		500000000,
+		image: 		'cailiao/174.png',
+		rarity: 	7,
+	},		
+	金星领主核心:{
+		name: 		'金星领主核心',
+		value: 		500000000,
+		image: 		'cailiao/175.png',
+		rarity: 	7,
+	},		
+	火星消息1:{
+		name: 		'火星消息1',
+		value: 		1000,
+		image: 		'cailiao/152.png',
+		rarity: 	1,
+	},			
+	火星消息2:{
+		name: 		'火星消息2',
+		value: 		1000,
+		image: 		'cailiao/152.png',
+		rarity: 	2,
+	},				
+	金星消息1:{
+		name: 		'金星消息1',
+		value: 		1000,
+		image: 		'cailiao/152.png',
+		rarity: 	1,
+	},			
+	金星消息2:{
+		name: 		'金星消息2',
+		value: 		1000,
+		image: 		'cailiao/152.png',
+		rarity: 	2,
+	},			
+	水星消息1:{
+		name: 		'水星消息1',
+		value: 		1000,
+		image: 		'cailiao/152.png',
+		rarity: 	1,
+	},			
+	水星消息2:{
+		name: 		'水星消息2',
+		value: 		1000,
+		image: 		'cailiao/152.png',
+		rarity: 	2,
+	},	
+
+	火星领主情报:{
+		name: 		'火星领主情报',
+		value: 		3000,
+		image: 		'cailiao/177.png',
+		rarity: 	5,
+	},
+	金星领主情报:{
+		name: 		'金星领主情报',
+		value: 		3000,
+		image: 		'cailiao/177.png',
+		rarity: 	5,
+	},	
+	水星领主情报:{
+		name: 		'水星领主情报',
+		value: 		3000,
+		image: 		'cailiao/177.png',
+		rarity: 	5,
+	},		
+	丰碑:{
+		name: 		'丰碑',
+		value: 		100000,
+		image: 		'cailiao/176.png',
+		rarity: 	6,
+	},		
+	火星探测器:{
+		name: 		'火星探测器',
+		value: 		2500,
+		image: 		'cailiao/178.png',
+		rarity: 	5,
+	},
+	金星探测器:{
+		name: 		'金星探测器',
+		value: 		2500,
+		image: 		'cailiao/178.png',
+		rarity: 	5,
+	},	
+	水星探测器:{
+		name: 		'水星探测器',
+		value: 		2500,
+		image: 		'cailiao/178.png',
+		rarity: 	5,
+	},	
+	太阳号:{
+		name: 		'太阳号',
+		value: 		3000000000,
+		image: 		'cailiao/141.png',
+		rarity: 	7,
+	},		
+	死亡激光:{
+		name: 		'死亡激光',
+		value: 		80000000,
+		image: 		'cailiao/180.png',
+		rarity: 	6,
+	},	
+	紫色激光:{
+		name: 		'紫色激光',
+		value: 		80000000,
+		image: 		'cailiao/197.png',
+		rarity: 	6,
+	},	
+	大型导弹:{
+		name: 		'大型导弹',
+		value: 		80000000,
+		image: 		'cailiao/198.png',
+		rarity: 	6,
+	},		
+	实验室:{
+		name: 		'实验室',
+		value: 		10000000,
+		image: 		'cailiao/181.png',
+		rarity: 	5,
+	},		
+	机械科技包:{
+		name: 		'机械科技包',
+		value: 		10001,
+		image: 		'cailiao/182.png',
+		rarity: 	3,
+	},		
+	智能核心:{
+		name: 		'智能核心',
+		value: 		10000000,
+		image: 		'cailiao/184.png',
+		rarity: 	3,
+	},			
+	自我进化:{
+		name: 		'自我进化',
+		value: 		100000000,
+		image: 		'cailiao/185.png',
+		rarity: 	5,
+	},		
+	机械研究瓶:{
+		name: 		'机械研究瓶',
+		value: 		100002,
+		image: 		'cailiao/166.png',
+		rarity: 	5,
+	},		
+	远征货运:{
+		name: 		'远征货运',
+		value: 		80000000,
+		image: 		'cailiao/187.png',
+		rarity: 	6,
+	},		
+	
+	山铜货运:{
+		name: 		'山铜货运',
+		value: 		750000000,
+		image: 		'cailiao/187.png',
+		rarity: 	6,
+	},			
+	陨铁货运:{
+		name: 		'陨铁货运',
+		value: 		750000000,
+		image: 		'cailiao/187.png',
+		rarity: 	6,
+	},		
+	钛铁货运:{
+		name: 		'钛铁货运',
+		value: 		750000000,
+		image: 		'cailiao/187.png',
+		rarity: 	6,
+	},		
+	超合金货运:{
+		name: 		'超合金货运',
+		value: 		750000000,
+		image: 		'cailiao/187.png',
+		rarity: 	6,
+	},		
 	
 	
 	
 	
+	
+	
+	能源之核:{
+		name: 		'能源之核',
+		value: 		10000001,
+		image: 		'cailiao/188.png',
+		rarity: 	4,
+	},		
+	
+	以太矿锭:{
+		name: 		'以太矿锭',
+		value: 		10000001,
+		image: 		'cailiao/189.png',
+		rarity: 	4,
+	},		
+	
+	生物组织:{
+		name: 		'生物组织',
+		value: 		10000001,
+		image: 		'cailiao/191.png',
+		rarity: 	4,
+	},		
+	水星变异号:{
+		name: 		'水星变异号',
+		value: 		400000000,
+		image: 		'cailiao/144.png',
+		rarity: 	5,
+	},			
+	火星保卫者:{
+		name: 		'火星保卫者',
+		value: 		370000000,
+		image: 		'cailiao/137.png',
+		rarity: 	5,
+	},			
+	
+	超能结晶:{
+		name: 		'超能结晶',
+		value: 		10000001,
+		image: 		'cailiao/190.png',
+		rarity: 	4,
+	},
+
+	星座之力:{
+		name: 		'星座之力',
+		value: 		10000001,
+		image: 		'cailiao/199.png',
+		rarity: 	5,
+	},
+	堕落之力:{
+		name: 		'堕落之力',
+		value: 		1000000000,
+		image: 		'cailiao/204.png',
+		rarity: 	7,
+	},	
+	飞船残骸1:{
+		name: 		'飞船残骸1',
+		value: 		1000000,
+		image: 		'cailiao/196.png',
+		rarity: 	3,
+	},		
+	飞船残骸2:{
+		name: 		'飞船残骸2',
+		value: 		2000001,
+		image: 		'cailiao/192.png',
+		rarity: 	4,
+	},		
+	飞船残骸3:{
+		name: 		'飞船残骸3',
+		value: 		2000001,
+		image: 		'cailiao/193.png',
+		rarity: 	4,
+	},		
+	飞船残骸4:{
+		name: 		'飞船残骸4',
+		value: 		2000001,
+		image: 		'cailiao/195.png',
+		rarity: 	4,
+	},		
+	飞船残骸5:{
+		name: 		'飞船残骸5',
+		value: 		2000001,
+		image: 		'cailiao/194.png',
+		rarity: 	4,
+	},			
+	
+	布沙克消息1:{
+		name: 		'布沙克消息1',
+		value: 		2000,
+		image: 		'cailiao/177.png',
+		rarity: 	3,
+	},		
+	以太风消息1:{
+		name: 		'以太风消息1',
+		value: 		2000,
+		image: 		'cailiao/177.png',
+		rarity: 	3,
+	},			
+	泽尔甘消息1:{
+		name: 		'泽尔甘消息1',
+		value: 		2000,
+		image: 		'cailiao/177.png',
+		rarity: 	3,
+	},		
+	达拉泽消息1:{
+		name: 		'达拉泽消息1',
+		value: 		2000,
+		image: 		'cailiao/177.png',
+		rarity: 	3,
+	},		
+	银河系传说1:{
+		name: 		'银河系传说1',
+		value: 		3000,
+		image: 		'cailiao/179.png',
+		rarity: 	5,
+	},		
+	
+	星门模块:{
+		name: 		'星门模块',
+		value: 		5000000,
+		image: 		'cailiao/183.png',
+		rarity: 	6,
+	},	
+	戴森壳模块:{
+		name: 		'戴森壳模块',
+		value: 		5000000,
+		image: 		'cailiao/183.png',
+		rarity: 	6,
+	},	
+	星环城模块:{
+		name: 		'星环城模块',
+		value: 		5000000,
+		image: 		'cailiao/183.png',
+		rarity: 	6,
+	},	
+	工厂模块:{
+		name: 		'工厂模块',
+		value: 		5000000,
+		image: 		'cailiao/183.png',
+		rarity: 	6,
+	},	
+	
+	活体矿物:{
+		name: 		'活体矿物',
+		value: 		100000000,
+		image: 		'cailiao/200.png',
+		rarity: 	5,
+	},			
+	生物科技瓶:{
+		name: 		'生物科技瓶',
+		value: 		100002,
+		image: 		'cailiao/165.png',
+		rarity: 	5,
+	},		
+	死射:{
+		name: 		'死射',
+		value: 		1000000000,
+		image: 		'cailiao/203.png',
+		rarity: 	7,
+	},			
+	巨齿鲨舰:{
+		name: 		'巨齿鲨舰',
+		value: 		3400000000,
+		image: 		'cailiao/201.png',
+		rarity: 	7,
+	},		
+	失控战舰情报:{
+		name: 		'失控战舰情报',
+		value: 		4000,
+		image: 		'cailiao/177.png',
+		rarity: 	5,
+	},		
+	星之合金:{
+		name: 		'星之合金',
+		value: 		100000000,
+		image: 		'cailiao/205.png',
+		rarity: 	7,
+	},		
+	星星之力:{
+		name: 		'星星之力',
+		value: 		10000,
+		image: 		'cailiao/206.png',
+		rarity: 	4,
+	},	
+	星宫之力:{
+		name: 		'星宫之力',
+		value: 		10000,
+		image: 		'cailiao/211.png',
+		rarity: 	4,
+	},	
+	
+	星宫守卫者:{
+		name: 		'星宫守卫者',
+		value: 		50000000000,
+		image: 		'cailiao/145.png',
+		rarity: 	8,
+	},		
+	星图:{
+		name: 		'星图',
+		value: 		5000000000,
+		image: 		'locations/t8n1.png',
+		rarity: 	8,
+	},			
+	智能辅助:{
+		name: 		'智能辅助',
+		value: 		10000000,
+		image: 		'cailiao/209.png',
+		rarity: 	5,
+	},			
+	星星物资包:{
+		name: 		'星星物资包',
+		value: 		880000000,
+		image: 		'cailiao/210.png',
+		rarity: 	8,
+	},		
+	
+	
+
+	
+	地球征服者:{
+		name: 		'地球征服者',
+		value: 		20000000000,
+		image: 		'cailiao/207.png',
+		rarity: 	7,
+	},		
+	月球征服者:{
+		name: 		'月球征服者',
+		value: 		20000000000,
+		image: 		'cailiao/207.png',
+		rarity: 	7,
+	},		
+	火星征服者:{
+		name: 		'火星征服者',
+		value: 		20000000000,
+		image: 		'cailiao/207.png',
+		rarity: 	7,
+	},	
+	金星征服者:{
+		name: 		'金星征服者',
+		value: 		20000000000,
+		image: 		'cailiao/207.png',
+		rarity: 	7,
+	},	
+	水星征服者:{
+		name: 		'水星征服者',
+		value: 		20000000000,
+		image: 		'cailiao/207.png',
+		rarity: 	7,
+	},	
+	太阳系征服者:{
+		name: 		'太阳系征服者',
+		value: 		20000000000,
+		image: 		'cailiao/207.png',
+		rarity: 	7,
+	},	
+
+	布沙克征服者:{
+		name: 		'布沙克征服者',
+		value: 		20000000000,
+		image: 		'cailiao/207.png',
+		rarity: 	7,
+	},		
+	以太风征服者:{
+		name: 		'以太风征服者',
+		value: 		20000000000,
+		image: 		'cailiao/207.png',
+		rarity: 	7,
+	},			
+	泽尔甘征服者:{
+		name: 		'泽尔甘征服者',
+		value: 		20000000000,
+		image: 		'cailiao/207.png',
+		rarity: 	7,
+	},		
+	达拉泽征服者:{
+		name: 		'达拉泽征服者',
+		value: 		20000000000,
+		image: 		'cailiao/207.png',
+		rarity: 	7,
+	},	
+
+
+
+
+
+	
+		
+	布沙克情报:{
+		name: 		'布沙克情报',
+		value: 		3001,
+		image: 		'cailiao/208.png',
+		rarity: 	3,
+	},		
+	以太风情报:{
+		name: 		'以太风情报',
+		value: 		3001,
+		image: 		'cailiao/208.png',
+		rarity: 	3,
+	},			
+	泽尔甘情报:{
+		name: 		'泽尔甘情报',
+		value: 		3001,
+		image: 		'cailiao/208.png',
+		rarity: 	3,
+	},		
+	达拉泽情报:{
+		name: 		'达拉泽情报',
+		value: 		3001,
+		image: 		'cailiao/208.png',
+		rarity: 	3,
+	},	
+	
+	
+	银河系之力:{
+		name: 		'银河系之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},		
+	白羊座之力:{
+		name: 		'白羊座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	金牛座之力:{
+		name: 		'金牛座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	双子座之力:{
+		name: 		'双子座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	巨蟹座之力:{
+		name: 		'巨蟹座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	狮子座之力:{
+		name: 		'狮子座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	处女座之力:{
+		name: 		'处女座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	天秤座之力:{
+		name: 		'天秤座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	天蝎座之力:{
+		name: 		'天蝎座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	射手座之力:{
+		name: 		'射手座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	魔蝎座之力:{
+		name: 		'魔蝎座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	水瓶座之力:{
+		name: 		'水瓶座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	双鱼座之力:{
+		name: 		'双鱼座之力',
+		value: 		4,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},	
+	
+		白羊座战舰:{
+		name: 		'白羊座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	金牛座战舰:{
+		name: 		'金牛座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	双子座战舰:{
+		name: 		'双子座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	巨蟹座战舰:{
+		name: 		'巨蟹座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	狮子座战舰:{
+		name: 		'狮子座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	处女座战舰:{
+		name: 		'处女座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	天秤座战舰:{
+		name: 		'天秤座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	天蝎座战舰:{
+		name: 		'天蝎座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	射手座战舰:{
+		name: 		'射手座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	魔蝎座战舰:{
+		name: 		'魔蝎座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	水瓶座战舰:{
+		name: 		'水瓶座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	双鱼座战舰:{
+		name: 		'双鱼座战舰',
+		value: 		3,
+		image: 		'cailiao/138.png',
+		rarity: 	8,
+	},	
+	执行员:{
+		name: 		'执行员',
+		value: 		1150000000,
+		image: 		'cailiao/216.png',
+		rarity: 	8,
+	},		
+	机械客:{
+		name: 		'机械客',
+		value: 		1150000000,
+		image: 		'cailiao/217.png',
+		rarity: 	8,
+	},		
+	执政宫殿:{
+		name: 		'执政宫殿',
+		value: 		7000000000,
+		image: 		'cailiao/215.png',
+		rarity: 	8,
+	},		
+	机械议员:{
+		name: 		'机械议员',
+		value: 		7000000000,
+		image: 		'cailiao/218.png',
+		rarity: 	8,
+	},		
+	执行力:{
+		name: 		'执行力',
+		value: 		1,
+		image: 		'cailiao/219.png',
+		rarity: 	5,
+	},		
+	作战指令:{
+		name: 		'作战指令',
+		value: 		1,
+		image: 		'cailiao/220.png',
+		rarity: 	5,
+	},		
+	武器零件包:{
+		name: 		'武器零件包',
+		value: 		1,
+		image: 		'cailiao/223.png',
+		rarity: 	5,
+	},	
+	零件包仓库:{
+		name: 		'零件包仓库',
+		value: 		2,
+		image: 		'cailiao/230.png',
+		rarity: 	5,
+	},
+	
+	工厂能量:{
+		name: 		'工厂能量',
+		value: 		1,
+		image: 		'cailiao/231.png',
+		rarity: 	5,
+	},
+	机械装置:{
+		name: 		'机械装置',
+		value: 		2,
+		image: 		'cailiao/225.png',
+		rarity: 	5,
+	},
+	
+	太空鱼雷:{
+		name: 		'太空鱼雷',
+		value: 		80000000,
+		image: 		'cailiao/222.png',
+		rarity: 	6,
+	},			
+	装甲鱼雷:{
+		name: 		'装甲鱼雷',
+		value: 		1000000000,
+		image: 		'cailiao/224.png',
+		rarity: 	7,
+	},		
+	机械骨骼:{
+		name: 		'机械骨骼',
+		value: 		1000000,
+		image: 		'cailiao/226.png',
+		rarity: 	5,
+	},		
+	
+	机械劳工:{
+		name: 		'机械劳工',
+		value: 		20000000,
+		image: 		'cailiao/228.png',
+		rarity: 	5,
+	},		
+	智能人:{
+		name: 		'智能人',
+		value: 		150000000,
+		image: 		'cailiao/229.png',
+		rarity: 	6,
+	},	
+	机械领袖:{
+		name: 		'机械领袖',
+		value: 		1500000000,
+		image: 		'cailiao/227.png',
+		rarity: 	7,
+	},		
+	鱼雷舰:{
+		name: 		'鱼雷舰',
+		value: 		30000000,
+		image: 		'cailiao/214.png',
+		rarity: 	4,
+	},		
+	熔岩核心:{
+		name: 		'熔岩核心',
+		value: 		10,
+		image: 		'cailiao/232.png',
+		rarity: 	8,
+	},		
+	剧毒核心:{
+		name: 		'剧毒核心',
+		value: 		10,
+		image: 		'cailiao/234.png',
+		rarity: 	8,
+	},		
+	寒冰核心:{
+		name: 		'寒冰核心',
+		value: 		10,
+		image: 		'cailiao/213.png',
+		rarity: 	8,
+	},		
+	
+	星核之力:{
+		name: 		'星核之力',
+		value: 		10,
+		image: 		'cailiao/235.png',
+		rarity: 	8,
+	},		
+	星尘之力:{
+		name: 		'星尘之力',
+		value: 		10,
+		image: 		'cailiao/236.png',
+		rarity: 	8,
+	},		
+	盖亚之力:{
+		name: 		'盖亚之力',
+		value: 		10,
+		image: 		'cailiao/237.png',
+		rarity: 	8,
+	},		
+	黄矮星之力:{
+		name: 		'黄矮星之力',
+		value: 		10,
+		image: 		'xq/1.png',
+		rarity: 	8,
+	},			
+	红巨星之力:{
+		name: 		'红巨星之力',
+		value: 		10,
+		image: 		'xq/2.png',
+		rarity: 	8,
+	},	
+	白矮星之力:{
+		name: 		'白矮星之力',
+		value: 		10,
+		image: 		'xq/3.png',
+		rarity: 	8,
+	},	
+	紫巨星之力:{
+		name: 		'紫巨星之力',
+		value: 		10,
+		image: 		'xq/4.png',
+		rarity: 	8,
+	},	
+	蓝巨星之力:{
+		name: 		'蓝巨星之力',
+		value: 		10,
+		image: 		'xq/5.png',
+		rarity: 	8,
+	},	
+	脉冲星之力:{
+		name: 		'脉冲星之力',
+		value: 		10,
+		image: 		'xq/6.png',
+		rarity: 	8,
+	},	
+	中子星之力:{
+		name: 		'中子星之力',
+		value: 		10,
+		image: 		'xq/7.png',
+		rarity: 	8,
+	},	
+	黑洞之力:{
+		name: 		'黑洞之力',
+		value: 		10,
+		image: 		'xq/8.png',
+		rarity: 	8,
+	},		
+	星战指挥部:{
+		name: 		'星战指挥部',
+		value: 		80000000000,
+		image: 		'cailiao/238.png',
+		rarity: 	8,
+	},			
+	星星能源:{
+		name: 		'星星能源',
+		value: 		5,
+		image: 		'cailiao/239.png',
+		rarity: 	8,
+	},		
+	跳跃引擎装置:{
+		name: 		'跳跃引擎装置',
+		value: 		5,
+		image: 		'cailiao/240.png',
+		rarity: 	8,
+	},		
+	战斗模拟器:{
+		name: 		'战斗模拟器',
+		value: 		5,
+		image: 		'cailiao/241.png',
+		rarity: 	8,
+	},		
+	材料分析仪:{
+		name: 		'材料分析仪',
+		value: 		5,
+		image: 		'cailiao/242.png',
+		rarity: 	8,
+	},		
 	
 	
 	
@@ -1732,7 +2913,7 @@ $.each(available_actions, function(action_id, action_info){
 			}
 			if(total_cost / full_value >= 1)
 			{
-				console.log(action_id + ' cost to high!!! ' + Math.floor((total_cost / full_value * 10)) / 10);
+				//console.log(action_id + ' cost to high!!! ' + Math.floor((total_cost / full_value * 10)) / 10);
 			}
 			/*if(total_cost / full_value >= 0.6 && total_cost / full_value < 1)
 			{

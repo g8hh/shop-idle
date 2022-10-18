@@ -2,6 +2,7 @@
 .single_ap_bonus_container,
 .achievement_details,
 .achievement_list,
+.achievement_list1,
 .spend_ap_list
 {
 	position:absolute;
@@ -27,6 +28,7 @@
 .spend_ap_list,
 .single_ap_bonus_container,
 .achievement_list,
+.achievement_list1,
 .single_ap_bonus_container
 {
 	top:150px;
@@ -36,7 +38,10 @@
 {
 	bottom:50px;
 }
-
+.achievement_list1
+{
+	bottom:50px;
+}
 .page_number
 {
 	display: inline-block;

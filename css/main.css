@@ -61,7 +61,7 @@ button:focus
 	width:1000px;
 	height:100vh;
 	max-width:100%;
-	max-height:800px;
+	max-height:1000px;
 	/*border:2px solid #555;
 	border-radius:5px;*/
 	box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
@@ -117,6 +117,7 @@ button:focus
 
 .home_devider
 {
+	
 	width:96%;
 	position:relative;
 	margin-left:2%;
@@ -127,6 +128,11 @@ button:focus
 	clear:both;
 }
 
+
+
+
+
+
 .page_section
 {
 	float:left;
@@ -135,6 +141,108 @@ button:focus
 	position:relative;
 	margin-top:10px;
 	text-align:center;
+}
+
+.page_section1
+{
+	background-image: url('../img/1.png');
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+	box-sizing:border-box;
+   
+
+}
+.page_section2
+{
+	background-image: url('../img/old-953394_6401.jpg');
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+}
+.page_section3
+{
+
+	border:2px solid #000;
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+	box-sizing:border-box;
+	background:  rgba(50,100,200,0.5);       
+}
+.page_section4
+{
+	border:2px solid #000;
+	background-image: url('../img/2.png');	  
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+	box-sizing:border-box;
+}
+.page_section5
+{
+	background-image: url('../img/3.png');	
+	border:2px solid #000;
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+	box-sizing:border-box;
+	
+}
+.page_section6
+{
+	background-image: url('../img/4.png');	
+	border:2px solid #000;
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+	box-sizing:border-box;
+	
+}
+
+.page_section7
+{
+	background-image: url('../img/5.png');	
+	border:2px solid #000;
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+	box-sizing:border-box;
+	
+}
+.page_section8
+{
+	background-image: url('../img/7.png');	
+	border:2px solid #000;
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+	box-sizing:border-box;
+	
 }
 
 .paper_bg
@@ -382,4 +490,328 @@ button.gold
 	font-size:24px;
 	color:#fff;
 	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
+}
+
+.战绩界面
+{
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+}
+.科技等级列表单界面
+{
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+}
+
+
+.科技进度
+{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	height:20px;
+	width:50%;
+	background-color:rgba(0,201,255,0.6);
+	box-shadow:inset 0px 15px 0px -5px rgba(255,255,255,0.2), inset -25px 0px 20px -20px rgba(255,255,255,0.5), inset 0px -10px 5px -10px rgba(0,0,0,0.8),10px 0px 10px 0px rgba(0,0,0,0.5);
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	
+}
+
+.巨构进度
+{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	height:20px;
+	width:50%;
+	background-color:rgba(255,226,0,0.5);
+	box-shadow:inset 0px 15px 0px -5px rgba(255,255,255,0.2), inset -25px 0px 20px -20px rgba(255,255,255,0.5), inset 0px -10px 5px -10px rgba(0,0,0,0.8),10px 0px 10px 0px rgba(0,0,0,0.5);
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	
+	
+}
+
+
+.巨构进度建造
+{
+	position: absolute;
+	right:3px;
+	top:0px;
+	font-family: arial;
+	font-weight: bold;
+	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
+	font-size:14px;
+	color:#fff;
+	z-index:1;
+	color:rgba(255,226,0,1);
+}
+
+.科学进度建造
+{
+	position: absolute;
+	right:3px;
+	top:0px;
+	font-family: arial;
+	font-weight: bold;
+	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
+	font-size:14px;
+	color:#fff;
+	z-index:1;
+	color:rgba(0,201,255,0.6);
+}
+
+
+
+#星区1
+{
+	color: #ffffff;
+	text-shadow: 0px 0px 10px #ffffff;
+}
+#星区2
+{
+	color: rgba(255,247,0,1);
+	text-shadow: 0px 0px 10px rgba(255,247,0,1);
+}
+#星系首都仓库2
+{
+	color: rgba(20,11,11,1);
+	text-shadow: 0px 0px 10px rgba(20,11,11,1);
+}
+
+#首都资源项目1_2
+{
+	background-color:rgba(255,191,0,0.8)
+}
+
+#首都资源项目2_2
+{
+	background-color:rgba(0,104,255,1)
+}
+#首都资源项目3_2
+{
+	background-color:rgba(20,11,11,0.8)
+}
+#首都资源项目4_2
+{
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(left, #607ded, #00c4ff, #ff2100);
+  background-image: -moz-linear-gradient(left, #607ded, #00c4ff, #ff2100);
+  background-image: -o-linear-gradient(left, #607ded, #00c4ff, #ff2100);
+}
+
+
+#星系舰队1_2
+{
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(left, #FF3030,#FF1493,	#FF00FF,#FF0000);
+  background-image: -moz-linear-gradient(left, #FF3030,#FF1493,	#FF00FF,#FF0000);
+  background-image: -o-linear-gradient(left, #FF3030,#FF1493,	#FF00FF,#FF0000);
+}
+#星区1_5   
+{
+	background-color:	rgba(239,13,11,0.8)
+}
+#星区1_1   
+{
+	background-color:	rgba(38,255,0,0.5)
+}
+
+#巨构项目1_1 
+{
+	background-color:	rgba(239,13,11,0.8)
+}
+#星区管理1 
+{
+	    color: rgba(255,255,255,1);
+	    text-shadow: 0px 0px 10px rgba(255,255,255,1);	
+}
+
+
+#行星
+{
+    margin: 2px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    overflow: hidden;	  
+    background-size: auto 106px;
+    background-position: center;
+    transform-origin: center;	
+}
+	
+	
+.星区管理2
+{
+	 background-image: url(../img/7.png); 
+        font-size:90%;
+		width:15%;
+		word-spacing:0px;	
+		
+}	
+#剧毒等级
+{
+	    color: rgba(48,255,0,1);
+	    text-shadow: 0px 0px 10px rgba(48,255,0,1);		
+}	
+#熔岩等级
+{
+	    color: rgba(255,79,0,1);
+	    text-shadow: 0px 0px 10px rgba(255,79,0,1);	
+}		
+#寒冰等级
+{
+	    color: rgba(0,181,255,1);	
+	    text-shadow: 0px 0px 10px rgba(0,181,255,1);	
+}		
+	
+.星区管理3
+{
+	background-image: url(../img/xq/43.png); 	
+	color: rgba(8,8,8,1);
+	text-shadow: 0px 0px 10px rgba(8,8,8,1);
+    font-size:100%;
+    margin: 2px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;  
+    background-size: auto 106px;
+    background-position: center;
+	
+}		
+#星核等级1
+{
+   color: rgba(255,255,255,1);
+   text-shadow: 0px 0px 10px rgba(255,255,255,1);		
+   border: 2px solid rgba(79,255,0,0.5)
+}			
+#星核等级2
+{
+   background-image: url(../img/xq/1.png); 
+   background-color:red 
+}
+#星核等级3
+{
+   background-image: url(../img/xq/2.png); 	
+}	
+#星核等级4
+{
+   background-image: url(../img/xq/3.png); 			
+}	
+#星核等级5
+{
+   background-image: url(../img/xq/4.png); 	
+}	
+#星核等级6
+{
+   background-image: url(../img/xq/5.png); 	
+}	
+#星核等级7
+{
+   background-image: url(../img/xq/6.png); 			
+}	
+#星核等级8
+{
+   background-image: url(../img/xq/7.png); 	
+}	
+#星核等级9
+{
+   color: rgba(255,255,255,1);
+   text-shadow: 0px 0px 10px rgba(255,255,255,1);		
+   background-image: url(../img/xq/8.png);	
+}	
+
+		
+	
+	
+#星球
+{
+	 background-image: url(../img/7.png); 
+        height: 100px;	 
+        font-size:70%;
+		width:15%;
+		word-spacing:0px;
+	    color: rgba(255,255,255,1);
+	    text-shadow: 0px 0px 10px rgba(255,255,255,1);	
+		float:right;
+		position:absolute;
+		right:0;
+		bottom:0;				
+}
+
+
+#星球消息
+{
+	 background-image: url(../img/7.png); 
+        height: 100px;			
+        font-size:90%;
+		width:70%;
+	    color: rgba(255,255,255,1);
+	    text-shadow: 0px 0px 10px rgba(255,255,255,1);	
+		float:left;
+		position:absolute;	
+		bottom:0;	
+        left:110px;	
+	    text-align: left;			
+}
+
+
+	
+#群星
+{
+	background-image: url('../img/7.png');	
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	text-align:center;
+	box-sizing:border-box;
+    display: inline-block;
+}
+
+#群星2
+{
+	background-image: url('../img/7.png');	
+
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+
+}
+
+
+
+#星区管理按钮 
+{
+    display:inline-block;
+	
+}
+
+.群星3
+{
+	background-image: url('../img/7.png');	
+
+	float:left;
+	width:96%;
+	margin-left:2%;
+	position:relative;
+	margin-top:10px;
+	text-align:center;
+	   
 }

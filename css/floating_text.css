@@ -80,3 +80,15 @@
     overflow:visible;
     left:50% !important;
 }
+
+
+
+.column {
+    width: 25%;
+    max-width: 400px;
+    min-width: 300px;
+    padding-right: 20px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
